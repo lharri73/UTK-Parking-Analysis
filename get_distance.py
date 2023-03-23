@@ -1,6 +1,6 @@
 import json
 from functools import reduce
-import googlemaps
+# import googlemaps
 import os
 import numpy as np
 from tqdm import tqdm
@@ -61,7 +61,7 @@ class Parser:
             data = json.load(f)
         self.buildings = parse_buildings(data)
         self.parking = parse_parking(data)
-        self.client = googlemaps.Client(os.environ['MAPS_API_KEY'])
+        # self.client = googlemaps.Client(os.environ['MAPS_API_KEY'])
         self.results_folder = "results"
         self.results_counter = 0
         self.distance_matrix = np.empty((2, len(self.buildings), len(self.parking)))
@@ -147,7 +147,10 @@ def main():
     norm = colors.Normalize(np.min(matrix), np.max(matrix))
     # plot colorbar
     plt.colorbar(cm.ScalarMappable(norm=norm, cmap=cmap), ax=plt.gca(), fraction=0.05, aspect=50)
-    plt.show()
+    plt.text(0.5, 0.5, 'DRAFT', transform=plt.gca().transAxes,
+            fontsize=300, color='gray', alpha=0.5,
+            ha='center', va='center', rotation=70)
+    plt.savefig('matrix.pdf')
     # print(matrix)
 
 
