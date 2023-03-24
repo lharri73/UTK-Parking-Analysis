@@ -65,7 +65,6 @@ class Parser:
         self.results_folder = "results"
         self.results_counter = 0
         self.distance_matrix = np.empty((2, len(self.buildings), len(self.parking)))
-        print(len(self.buildings), len(self.parking))
 
         if not os.path.exists(self.results_folder):
             os.makedirs(self.results_folder)
@@ -124,11 +123,9 @@ def main():
     # matrix = p.get_distance(origins, destinations)
     matrix = p.gen_matrix(buildings, parking)
     matrix /= 60
-    print(matrix)
 
     mean_buildings = np.nanmean(matrix[0,:,:], axis=1)
     mean_parking = np.nanmean(matrix[0,:,:], axis=0)
-    print(mean_buildings.shape, mean_parking.shape)
 
     sorted_buildings = np.flip(np.argsort(mean_buildings))
     sorted_parking = np.flip(np.argsort(mean_parking))
@@ -151,7 +148,7 @@ def main():
             fontsize=300, color='gray', alpha=0.5,
             ha='center', va='center', rotation=70)
     plt.savefig('matrix.pdf')
-    # print(matrix)
+    print("done")
 
 
 if __name__ == "__main__":
