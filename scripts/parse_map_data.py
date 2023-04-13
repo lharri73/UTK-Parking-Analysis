@@ -3,7 +3,7 @@ import os
 
 from utparking.lib.map_parser import Parser
 
-data_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'tmp.json')
+data_file = os.path.join(os.path.dirname(__file__), '..', 'data')
 
 def main():
     p  = Parser(os.path.join(data_file, 'tmp.json'))
