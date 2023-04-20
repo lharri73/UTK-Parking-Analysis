@@ -2,11 +2,12 @@ from utparking.utils import unique
 
 
 class Building:
-    def __init__(self, name, lat, lon, cat):
+    def __init__(self, name, lat, lon, cat, code=None):
         self.name = name
         self.lat = lat
         self.lon = lon
         self.cat = cat
+        self.code = code
         # 80: academic and administrative
         # 66: Commuter
         # 67: Non-Commuter
@@ -20,7 +21,13 @@ class Building:
         return self.name == other.name
 
     def to_json(self):
-        return {"name": self.name, "lat": self.lat, "lon": self.lon, "cat": self.cat}
+        return {
+            "name": self.name,
+            "lat": self.lat,
+            "lon": self.lon,
+            "cat": self.cat,
+            "code": self.code,
+        }
 
     @classmethod
     def parse_buildings(cls, data):
