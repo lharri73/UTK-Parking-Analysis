@@ -2,6 +2,8 @@ import json
 import os
 from csv import DictReader
 
+from Levenshtein import distance
+
 from utparking.lib.map_parser import Parser
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
@@ -14,8 +16,17 @@ def find_matching_building(read_buildings, building_name):
         try:
             return read_buildings[building_name + " Building"]
         except KeyError:
-            pass
-        print(f"Couldn't find {building_name} in BuildingList.csv")
+            print("trying levenshtein")
+            smallest = 10000
+            smallest_idx = None
+            for b in read_buildings.keys():
+                cur = distance(building_name, b)
+                if cur < smallest:
+                    smallest = cur
+                    smallest_idx = b
+            print(f"Couldn't find {building_name} in BuildingList.csv")
+            return read_buildings[smallest_idx] + "-LEVEN"
+
     return None
 
 
