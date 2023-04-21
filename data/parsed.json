@@ -12,14 +12,14 @@
             "lat": 35.968502,
             "lon": -83.937958,
             "cat": 3040,
-            "code": "UA1-LEVEN"
+            "code": "UA1"
         },
         {
             "name": "1610 University Avenue",
             "lat": 35.967449,
             "lon": -83.938538,
             "cat": 3040,
-            "code": "UA2-LEVEN"
+            "code": "UA2"
         },
         {
             "name": "1817 Melrose Avenue",
@@ -33,7 +33,7 @@
             "lat": 35.952579,
             "lon": -83.937531,
             "cat": 3040,
-            "code": "TA2-LEVEN"
+            "code": "TA2"
         },
         {
             "name": "2106 Terrace Avenue",
@@ -54,7 +54,7 @@
             "lat": 35.945896,
             "lon": -83.930428,
             "cat": 3040,
-            "code": "WHS-LEVEN"
+            "code": "WHS"
         },
         {
             "name": "22nd Street Duplex",
@@ -68,14 +68,14 @@
             "lat": 35.953163,
             "lon": -83.93708,
             "cat": 3040,
-            "code": "-LEVEN"
+            "code": "VCU"
         },
         {
             "name": "Alternative Energy Research Support Bldg 1",
             "lat": 35.941765,
             "lon": -83.947166,
             "cat": 3040,
-            "code": "AER-LEVEN"
+            "code": "AER"
         },
         {
             "name": "Alumni Memorial Building",
@@ -145,7 +145,7 @@
             "lat": 35.948719,
             "lon": -83.939987,
             "cat": 3040,
-            "code": "BES-LEVEN"
+            "code": "BES"
         },
         {
             "name": "BESS Tank & Equipment Storage",
@@ -159,14 +159,14 @@
             "lat": 35.948189,
             "lon": -83.94001,
             "cat": 3040,
-            "code": "BEL-LEVEN"
+            "code": "BEL"
         },
         {
             "name": "Biosystems Engineering and Environmental Sciences Office",
             "lat": 35.94878,
             "lon": -83.940567,
             "cat": 3040,
-            "code": "BEO-LEVEN"
+            "code": "BEO"
         },
         {
             "name": "Blount Hall",
@@ -188,13 +188,6 @@
             "lon": -83.92749,
             "cat": 3040,
             "code": "BGB"
-        },
-        {
-            "name": "Burlington Building",
-            "lat": 36.004093,
-            "lon": -83.859352,
-            "cat": 3040,
-            "code": "BUT-LEVEN"
         },
         {
             "name": "Business Incubator",
@@ -253,13 +246,6 @@
             "code": "CER"
         },
         {
-            "name": "College of Nursing",
-            "lat": 35.953922,
-            "lon": -83.927185,
-            "cat": 3040,
-            "code": "BUT-LEVEN"
-        },
-        {
             "name": "UT Drive Services Building A",
             "lat": 35.948132,
             "lon": -83.935173,
@@ -302,13 +288,6 @@
             "code": "UWH"
         },
         {
-            "name": "Vehicle Wash Bay",
-            "lat": 35.95805,
-            "lon": -83.95253,
-            "cat": 3040,
-            "code": "TEM-LEVEN"
-        },
-        {
             "name": "Veterinary Medical Center",
             "lat": 35.945618,
             "lon": -83.940086,
@@ -320,7 +299,7 @@
             "lat": 35.958443,
             "lon": -83.9524,
             "cat": 3040,
-            "code": "FLT-LEVEN"
+            "code": "FLT"
         },
         {
             "name": "Visitor Parking Information Center",
@@ -330,13 +309,6 @@
             "code": "VPC"
         },
         {
-            "name": "Fleet Management and Support Building",
-            "lat": 35.958755,
-            "lon": -83.952972,
-            "cat": 3040,
-            "code": "BAS-LEVEN"
-        },
-        {
             "name": "Walters Academic Building",
             "lat": 35.957195,
             "lon": -83.927673,
@@ -344,25 +316,11 @@
             "code": "WAB"
         },
         {
-            "name": "Building Finishes Shop",
-            "lat": 35.95916,
-            "lon": -83.953346,
-            "cat": 3040,
-            "code": "INC-LEVEN"
-        },
-        {
             "name": "William M. Bass Forensic Anthropology Building",
             "lat": 35.941101,
             "lon": -83.940224,
             "cat": 3040,
-            "code": "BAC-LEVEN"
-        },
-        {
-            "name": "Buehler Hall",
-            "lat": 35.958408,
-            "lon": -83.925262,
-            "cat": 3040,
-            "code": "GEI-LEVEN"
+            "code": "BAC"
         },
         {
             "name": "Dougherty Engineering Building",
@@ -383,7 +341,7 @@
             "lat": 35.957123,
             "lon": -83.924492,
             "cat": 3040,
-            "code": "SRF-LEVEN"
+            "code": "SRF"
         },
         {
             "name": "Senter Hall",
@@ -397,7 +355,7 @@
             "lat": 35.946297,
             "lon": -83.938652,
             "cat": 3040,
-            "code": "SHD-LEVEN"
+            "code": "SHD"
         },
         {
             "name": "South College",
@@ -412,13 +370,6 @@
             "lon": -83.937019,
             "cat": 3040,
             "code": "SGH"
-        },
-        {
-            "name": "Southern Precast - Office Building",
-            "lat": 35.958672,
-            "lon": -83.947311,
-            "cat": 3040,
-            "code": "SSB-LEVEN"
         },
         {
             "name": "Steam Plant",
@@ -477,41 +428,6 @@
             "code": "SSB"
         },
         {
-            "name": "Public Safety Building",
-            "lat": 35.959347,
-            "lon": -83.953506,
-            "cat": 3040,
-            "code": "APB-LEVEN"
-        },
-        {
-            "name": "Building Juliet",
-            "lat": 35.959881,
-            "lon": -83.953682,
-            "cat": 3040,
-            "code": "BLH-LEVEN"
-        },
-        {
-            "name": "Operations Services",
-            "lat": 35.958698,
-            "lon": -83.954445,
-            "cat": 3040,
-            "code": "CRA-LEVEN"
-        },
-        {
-            "name": "Landscape Storage",
-            "lat": 35.958588,
-            "lon": -83.954971,
-            "cat": 3040,
-            "code": "FPS-LEVEN"
-        },
-        {
-            "name": "Landscape Support",
-            "lat": 35.958782,
-            "lon": -83.954842,
-            "cat": 3040,
-            "code": "UGS-LEVEN"
-        },
-        {
             "name": "Conference Center Building",
             "lat": 35.962372,
             "lon": -83.921219,
@@ -530,14 +446,14 @@
             "lat": 35.945374,
             "lon": -83.937134,
             "cat": 3040,
-            "code": "CRB-LEVEN"
+            "code": "CRB"
         },
         {
             "name": "CRC-Material Science and Technology Unit",
             "lat": 35.945251,
             "lon": -83.937592,
             "cat": 3040,
-            "code": "CRM-LEVEN"
+            "code": "CRM"
         },
         {
             "name": "Crops Genetic Laboratory",
@@ -551,7 +467,7 @@
             "lat": 35.953442,
             "lon": -83.936989,
             "cat": 3040,
-            "code": "EL2-LEVEN"
+            "code": "EL1"
         },
         {
             "name": "Early Learning Center - Research & Practice",
@@ -594,13 +510,6 @@
             "lon": -83.94648,
             "cat": 3040,
             "code": "HAB"
-        },
-        {
-            "name": "Extension Eastern Region Office",
-            "lat": 35.923557,
-            "lon": -84.051216,
-            "cat": 3040,
-            "code": "CFB-LEVEN"
         },
         {
             "name": "Feed Storage Building",
@@ -656,7 +565,7 @@
             "lat": 35.956421,
             "lon": -83.93177,
             "cat": 3040,
-            "code": "HBC-LEVEN"
+            "code": "HBC"
         },
         {
             "name": "Humanities and Social Sciences Building",
@@ -691,7 +600,7 @@
             "lat": 35.958237,
             "lon": -83.929184,
             "cat": 3040,
-            "code": "LWT-LEVEN"
+            "code": "LWT"
         },
         {
             "name": "Law Complex: Law Library and Classroom Addition",
@@ -705,14 +614,14 @@
             "lat": 35.955719,
             "lon": -83.928719,
             "cat": 3040,
-            "code": "HBB-LEVEN"
+            "code": "HBB"
         },
         {
             "name": "James D. Hoskins Library",
             "lat": 35.958771,
             "lon": -83.927956,
             "cat": 3040,
-            "code": "HOS-LEVEN"
+            "code": "HOS"
         },
         {
             "name": "Jane and David Bailey Education Complex",
@@ -726,7 +635,7 @@
             "lat": 35.959267,
             "lon": -83.926308,
             "cat": 3040,
-            "code": "JHB-LEVEN"
+            "code": "JHB"
         },
         {
             "name": "Jewel Building",
@@ -740,21 +649,21 @@
             "lat": 35.955029,
             "lon": -83.929886,
             "cat": 3040,
-            "code": "LIB-LEVEN"
+            "code": "LIB"
         },
         {
             "name": "John D. Tickle Engineering Building",
             "lat": 35.955769,
             "lon": -83.922707,
             "cat": 3040,
-            "code": "TIC-LEVEN"
+            "code": "TIC"
         },
         {
             "name": "Institute for Advanced Materials and Manufacturing",
             "lat": 35.942631,
             "lon": -83.952499,
             "cat": 3040,
-            "code": "AMM-LEVEN"
+            "code": "AMM"
         },
         {
             "name": "McClung Tower and Plaza",
@@ -789,7 +698,7 @@
             "lat": 35.958523,
             "lon": -83.924568,
             "cat": 3040,
-            "code": "MKB-LEVEN"
+            "code": "MKB"
         },
         {
             "name": "Morgan Hall",
@@ -803,7 +712,7 @@
             "lat": 35.951962,
             "lon": -83.93071,
             "cat": 3040,
-            "code": "HMC-LEVEN"
+            "code": "HMC"
         },
         {
             "name": "Nielsen Physics Building",
@@ -831,14 +740,14 @@
             "lat": 35.948532,
             "lon": -83.939308,
             "cat": 3040,
-            "code": "RAC-LEVEN"
+            "code": "RAC"
         },
         {
             "name": "Radiological Safety - Old Cherokee Trail",
             "lat": 35.941143,
             "lon": -83.939949,
             "cat": 3040,
-            "code": "RAD-LEVEN"
+            "code": "RAD"
         },
         {
             "name": "Reese Hall Chiller",
@@ -852,7 +761,7 @@
             "lat": 35.995731,
             "lon": -83.9561,
             "cat": 3040,
-            "code": "RTT-LEVEN"
+            "code": "RTT"
         },
         {
             "name": "Ferris Hall",
@@ -866,7 +775,7 @@
             "lat": 35.959641,
             "lon": -83.927773,
             "cat": 3040,
-            "code": "FCM-LEVEN"
+            "code": "FCM"
         },
         {
             "name": "Fleet Management",
@@ -880,7 +789,7 @@
             "lat": 35.942524,
             "lon": -83.944946,
             "cat": 3040,
-            "code": "FAR-LEVEN"
+            "code": "FAR"
         },
         {
             "name": "Food Safety and Processing",
@@ -985,7 +894,7 @@
             "lat": 35.954762,
             "lon": -83.928032,
             "cat": 3040,
-            "code": "CLX-LEVEN"
+            "code": "CLX"
         },
         {
             "name": "Plant Biotechnology Building",
@@ -1020,14 +929,14 @@
             "lat": 35.954247,
             "lon": -83.924683,
             "cat": 3040,
-            "code": "SSH-LEVEN"
+            "code": "SSH"
         },
         {
             "name": "Dabney Hall",
             "lat": 35.957905,
             "lon": -83.924889,
             "cat": 3040,
-            "code": "MSH-LEVEN"
+            "code": "DAB"
         },
         {
             "name": "Zeanah Engineering Complex",
@@ -1042,20 +951,6 @@
             "lon": -83.938499,
             "cat": 3040,
             "code": "TCB"
-        },
-        {
-            "name": "McIllwaine Friendship Pavilion",
-            "lat": 35.943947,
-            "lon": -83.938423,
-            "cat": 3040,
-            "code": "IFP-LEVEN"
-        },
-        {
-            "name": "ETREC JARTU Feed Center",
-            "lat": 35.942104,
-            "lon": -83.947845,
-            "cat": 3040,
-            "code": "EL1-LEVEN"
         },
         {
             "name": "Animal Shelter",
@@ -1084,6 +979,692 @@
             "lon": -83.947968,
             "cat": 3040,
             "code": "FSC"
+        },
+        {
+            "name": "Ula Love Doughty Carousel Theatre",
+            "lat": 35.953117,
+            "lon": -83.930061,
+            "cat": 3041,
+            "code": "CTH"
+        },
+        {
+            "name": "Clarence Brown Theatre",
+            "lat": 35.953232,
+            "lon": -83.930634,
+            "cat": 3041,
+            "code": "CBT"
+        },
+        {
+            "name": "Frank H. McClung Museum of Natural History and Culture",
+            "lat": 35.951996,
+            "lon": -83.927223,
+            "cat": 3041,
+            "code": "MCM"
+        },
+        {
+            "name": "Carrick Hall North",
+            "lat": 35.952209,
+            "lon": -83.935051,
+            "cat": 3042,
+            "code": "CHN"
+        },
+        {
+            "name": "Carrick Hall South",
+            "lat": 35.951839,
+            "lon": -83.934776,
+            "cat": 3042,
+            "code": "CHS"
+        },
+        {
+            "name": "Dogwood Hall",
+            "lat": 35.950817,
+            "lon": -83.93689,
+            "cat": 3042,
+            "code": "DOG"
+        },
+        {
+            "name": "Volunteer Hall",
+            "lat": 35.959064,
+            "lon": -83.930008,
+            "cat": 3042,
+            "code": "VOL"
+        },
+        {
+            "name": "Robinson Hall",
+            "lat": 35.951725,
+            "lon": -83.935555,
+            "cat": 3042,
+            "code": "ROB"
+        },
+        {
+            "name": "Stokely Hall",
+            "lat": 35.951706,
+            "lon": -83.928833,
+            "cat": 3042,
+            "code": "STK"
+        },
+        {
+            "name": "Hess Hall",
+            "lat": 35.954071,
+            "lon": -83.931114,
+            "cat": 3042,
+            "code": "HES"
+        },
+        {
+            "name": "Laurel Apts Pool House",
+            "lat": 35.959755,
+            "lon": -83.932854,
+            "cat": 3042,
+            "code": "LPH"
+        },
+        {
+            "name": "Laurel Residence Hall",
+            "lat": 35.959743,
+            "lon": -83.932327,
+            "cat": 3042,
+            "code": "LRH"
+        },
+        {
+            "name": "Massey Hall",
+            "lat": 35.955929,
+            "lon": -83.931328,
+            "cat": 3042,
+            "code": "MSH"
+        },
+        {
+            "name": "Geier Hall",
+            "lat": 35.952114,
+            "lon": -83.936035,
+            "cat": 3042,
+            "code": "GEI"
+        },
+        {
+            "name": "Reese Hall",
+            "lat": 35.952755,
+            "lon": -83.93486,
+            "cat": 3042,
+            "code": "REE"
+        },
+        {
+            "name": "Frank G. Clement Hall",
+            "lat": 35.957253,
+            "lon": -83.932281,
+            "cat": 3042,
+            "code": "CLE"
+        },
+        {
+            "name": "Fred D. Brown Jr. Residence Hall",
+            "lat": 35.952969,
+            "lon": -83.932388,
+            "cat": 3042,
+            "code": "BRW"
+        },
+        {
+            "name": "Magnolia Hall",
+            "lat": 35.950382,
+            "lon": -83.93634,
+            "cat": 3042,
+            "code": "MAG"
+        },
+        {
+            "name": "Anderson Training Center",
+            "lat": 35.949764,
+            "lon": -83.927406,
+            "cat": 3043,
+            "code": "ATC"
+        },
+        {
+            "name": "Barksdale Tennis Stadium",
+            "lat": 35.950985,
+            "lon": -83.937248,
+            "cat": 3043,
+            "code": "BTS"
+        },
+        {
+            "name": "Thompson-Boling Assembly Center and Arena",
+            "lat": 35.951164,
+            "lon": -83.924942,
+            "cat": 3043,
+            "code": "TBA"
+        },
+        {
+            "name": "Brenda Lawson Athletic Center",
+            "lat": 35.950184,
+            "lon": -83.92717,
+            "cat": 3043,
+            "code": "LAC"
+        },
+        {
+            "name": "Thornton Athletics Student Life Center",
+            "lat": 35.951077,
+            "lon": -83.931259,
+            "cat": 3043,
+            "code": "THO"
+        },
+        {
+            "name": "Tom Black Track Facilities Building",
+            "lat": 35.950676,
+            "lon": -83.933479,
+            "cat": 3043,
+            "code": "TB1"
+        },
+        {
+            "name": "Tom Black Track Pressbox",
+            "lat": 35.951183,
+            "lon": -83.932907,
+            "cat": 3043,
+            "code": "TB2"
+        },
+        {
+            "name": "Allan Jones Intercollegiate Aquatic Center",
+            "lat": 35.949108,
+            "lon": -83.936356,
+            "cat": 3043,
+            "code": "JAQ"
+        },
+        {
+            "name": "Wayne G. Basler Boathouse",
+            "lat": 35.955345,
+            "lon": -83.921967,
+            "cat": 3043,
+            "code": "WBB"
+        },
+        {
+            "name": "West Skybox Addition",
+            "lat": 35.954502,
+            "lon": -83.925758,
+            "cat": 3043,
+            "code": "WSA"
+        },
+        {
+            "name": "Sherri Parker Lee Stadium",
+            "lat": 35.945557,
+            "lon": -83.934875,
+            "cat": 3043,
+            "code": "SLS"
+        },
+        {
+            "name": "Sherri Parker Lee Stadium - Team Facility",
+            "lat": 35.945843,
+            "lon": -83.935455,
+            "cat": 3043,
+            "code": "LTF"
+        },
+        {
+            "name": "East Skybox and Pressbox",
+            "lat": 35.955467,
+            "lon": -83.924171,
+            "cat": 3043,
+            "code": "ESK"
+        },
+        {
+            "name": "Lindsey Nelson Stadium",
+            "lat": 35.949352,
+            "lon": -83.92984,
+            "cat": 3043,
+            "code": "LNS"
+        },
+        {
+            "name": "Joan Cronan Volleyball Practice Facility",
+            "lat": 35.946266,
+            "lon": -83.931427,
+            "cat": 3043,
+            "code": "JVP"
+        },
+        {
+            "name": "Neyland-Thompson Sports Center",
+            "lat": 35.950706,
+            "lon": -83.927872,
+            "cat": 3043,
+            "code": "NSC"
+        },
+        {
+            "name": "Regal Soccer Stadium",
+            "lat": 35.945763,
+            "lon": -83.933578,
+            "cat": 3043,
+            "code": "RSS"
+        },
+        {
+            "name": "Golf Facility Building",
+            "lat": 35.936584,
+            "lon": -83.950233,
+            "cat": 3043,
+            "code": "GFB"
+        },
+        {
+            "name": "Golf Maintenance Building",
+            "lat": 35.936413,
+            "lon": -83.949852,
+            "cat": 3043,
+            "code": "GMB"
+        },
+        {
+            "name": "Goodfriend Tennis Center",
+            "lat": 35.95153,
+            "lon": -83.9366,
+            "cat": 3043,
+            "code": "GTC"
+        },
+        {
+            "name": "Pratt Pavilion",
+            "lat": 35.950169,
+            "lon": -83.925682,
+            "cat": 3043,
+            "code": "PRT"
+        },
+        {
+            "name": "Tom Black Track Team Building",
+            "lat": 35.951729,
+            "lon": -83.931808,
+            "cat": 3043,
+            "code": "TB5"
+        },
+        {
+            "name": "Tom Black Track Pressbox Addition",
+            "lat": 35.950638,
+            "lon": -83.931686,
+            "cat": 3043,
+            "code": "TB3"
+        },
+        {
+            "name": "Tom & Elaine Edwards Band Practice Facility",
+            "lat": 35.950222,
+            "lon": -83.934036,
+            "cat": 3043,
+            "code": "EBP"
+        },
+        {
+            "name": "Alpha Chi Omega Sorority",
+            "lat": 35.950172,
+            "lon": -83.945168,
+            "cat": 28180,
+            "code": "ACO"
+        },
+        {
+            "name": "Alpha Delta Pi Sorority",
+            "lat": 35.950996,
+            "lon": -83.945068,
+            "cat": 28180,
+            "code": "ADP"
+        },
+        {
+            "name": "Alpha Gamma Rho Fraternity",
+            "lat": 35.948063,
+            "lon": -83.932899,
+            "cat": 28180,
+            "code": "AGR"
+        },
+        {
+            "name": "Alpha Omicron Pi Sorority",
+            "lat": 35.951504,
+            "lon": -83.944153,
+            "cat": 28180,
+            "code": "AOP"
+        },
+        {
+            "name": "Chi Omega Sorority",
+            "lat": 35.950211,
+            "lon": -83.944748,
+            "cat": 28180,
+            "code": "COS"
+        },
+        {
+            "name": "Zeta Tau Alpha Sorority",
+            "lat": 35.950794,
+            "lon": -83.944061,
+            "cat": 28180,
+            "code": "ZTA"
+        },
+        {
+            "name": "Delta Delta Delta Sorority",
+            "lat": 35.950363,
+            "lon": -83.944466,
+            "cat": 28180,
+            "code": "DDD"
+        },
+        {
+            "name": "Delta Gamma Sorority",
+            "lat": 35.949913,
+            "lon": -83.945267,
+            "cat": 28180,
+            "code": "DGS"
+        },
+        {
+            "name": "Delta Zeta Sorority",
+            "lat": 35.951057,
+            "lon": -83.94606,
+            "cat": 28180,
+            "code": "DZS"
+        },
+        {
+            "name": "Sigma Alpha Epsilon Fraternity",
+            "lat": 35.949509,
+            "lon": -83.930931,
+            "cat": 28180,
+            "code": "SAE"
+        },
+        {
+            "name": "Sigma Chi",
+            "lat": 35.949471,
+            "lon": -83.931602,
+            "cat": 28180,
+            "code": "SCF"
+        },
+        {
+            "name": "Sigma Kappa Sorority",
+            "lat": 35.951199,
+            "lon": -83.944855,
+            "cat": 28180,
+            "code": "SSK"
+        },
+        {
+            "name": "Sigma Nu Fraternity",
+            "lat": 35.948936,
+            "lon": -83.931702,
+            "cat": 28180,
+            "code": "SNU"
+        },
+        {
+            "name": "Sigma Phi Epsilon Fraternity",
+            "lat": 35.948193,
+            "lon": -83.931992,
+            "cat": 28180,
+            "code": "SPE"
+        },
+        {
+            "name": "Sorority Village Center",
+            "lat": 35.950508,
+            "lon": -83.945221,
+            "cat": 28180,
+            "code": "SVC"
+        },
+        {
+            "name": "Kappa Delta Sorority",
+            "lat": 35.951389,
+            "lon": -83.944527,
+            "cat": 28180,
+            "code": "KDS"
+        },
+        {
+            "name": "Kappa Kappa Gamma Sorority",
+            "lat": 35.951061,
+            "lon": -83.945648,
+            "cat": 28180,
+            "code": "KKG"
+        },
+        {
+            "name": "Kappa Sigma Fraternity",
+            "lat": 35.955254,
+            "lon": -83.932144,
+            "cat": 28180,
+            "code": "KSF"
+        },
+        {
+            "name": "Lambda Chi Alpha Fraternity",
+            "lat": 35.948055,
+            "lon": -83.933708,
+            "cat": 28180,
+            "code": "LCA"
+        },
+        {
+            "name": "Phi Gamma Delta Fraternity",
+            "lat": 35.947884,
+            "lon": -83.932373,
+            "cat": 28180,
+            "code": "PGP"
+        },
+        {
+            "name": "Phi Kappa Psi Fraternity",
+            "lat": 35.949604,
+            "lon": -83.930237,
+            "cat": 28180,
+            "code": "PKP"
+        },
+        {
+            "name": "Phi Mu Sorority",
+            "lat": 35.950577,
+            "lon": -83.94426,
+            "cat": 28180,
+            "code": "PMU"
+        },
+        {
+            "name": "Beta Upsilon Chi",
+            "lat": 35.949932,
+            "lon": -83.929878,
+            "cat": 28180,
+            "code": "PSK"
+        },
+        {
+            "name": "Pi Beta Phi Sorority",
+            "lat": 35.950825,
+            "lon": -83.945389,
+            "cat": 28180,
+            "code": "PBP"
+        },
+        {
+            "name": "Pi Kappa Alpha Fraternity",
+            "lat": 35.949211,
+            "lon": -83.931992,
+            "cat": 28180,
+            "code": "PKA"
+        },
+        {
+            "name": "Pi Kappa Phi Fraternity",
+            "lat": 35.948524,
+            "lon": -83.93158,
+            "cat": 28180,
+            "code": "PKF"
+        },
+        {
+            "name": "Sigma Alpha Epsilon Fraternity",
+            "lat": 35.949654,
+            "lon": -83.930962,
+            "cat": 28180,
+            "code": "SAE"
+        },
+        {
+            "name": "Student Union Phase II",
+            "lat": 35.957096,
+            "lon": -83.929016,
+            "cat": 28192,
+            "code": "SU2"
+        },
+        {
+            "name": "University Commons Vol Shop",
+            "lat": 35.95063,
+            "lon": -83.939774,
+            "cat": 28192,
+            "code": "UCV"
+        },
+        {
+            "name": "UT Culinary Institute and Creamery",
+            "lat": 35.950314,
+            "lon": -83.947327,
+            "cat": 28192,
+            "code": "CIC"
+        },
+        {
+            "name": "Vol Shop - Cumberland",
+            "lat": 35.956875,
+            "lon": -83.932144,
+            "cat": 28192,
+            "code": "VSC"
+        },
+        {
+            "name": "Student Aquatic Center",
+            "lat": 35.949924,
+            "lon": -83.935135,
+            "cat": 28192,
+            "code": "AQU"
+        },
+        {
+            "name": "Student Health Center",
+            "lat": 35.950378,
+            "lon": -83.930695,
+            "cat": 28192,
+            "code": "SHC"
+        },
+        {
+            "name": "Student Recreational and Fitness Center",
+            "lat": 35.949028,
+            "lon": -83.93438,
+            "cat": 28192,
+            "code": "REC"
+        },
+        {
+            "name": "Student Union Phase I",
+            "lat": 35.956238,
+            "lon": -83.928101,
+            "cat": 28192,
+            "code": "SU1-LEVEN"
+        },
+        {
+            "name": "Intramural Fields Maintenance Building",
+            "lat": 35.942753,
+            "lon": -83.979851,
+            "cat": 28192,
+            "code": "IFM"
+        },
+        {
+            "name": "Intramural Fields Central Building",
+            "lat": 35.944637,
+            "lon": -83.978859,
+            "cat": 28192,
+            "code": "IFB"
+        },
+        {
+            "name": "Intramural Fields Pavilion",
+            "lat": 35.944492,
+            "lon": -83.979759,
+            "cat": 28192,
+            "code": "IFP"
+        },
+        {
+            "name": "Frieson Black Cultural Center",
+            "lat": 35.95364,
+            "lon": -83.93206,
+            "cat": 28192,
+            "code": "FBC"
+        },
+        {
+            "name": "Presidential Court",
+            "lat": 35.952728,
+            "lon": -83.934113,
+            "cat": 28192,
+            "code": "PRS"
+        },
+        {
+            "name": "Health, Physical Education, and Recreation Building",
+            "lat": 35.951878,
+            "lon": -83.93264,
+            "cat": 28192,
+            "code": "HPR"
+        },
+        {
+            "name": "Aramark Food Court",
+            "lat": 35.956856,
+            "lon": -83.93235,
+            "cat": 28192,
+            "code": "AFC"
+        },
+        {
+            "name": "Rocky Top Dining Hall",
+            "lat": 35.951778,
+            "lon": -83.934052,
+            "cat": 28192,
+            "code": "RTD"
+        },
+        {
+            "name": "Presidential Court",
+            "lat": 35.952793,
+            "lon": -83.934052,
+            "cat": 45447,
+            "code": "PRS"
+        },
+        {
+            "name": "Dogwood",
+            "lat": 35.950703,
+            "lon": -83.936798,
+            "cat": 45447,
+            "code": "DOG"
+        },
+        {
+            "name": "Magnolia",
+            "lat": 35.950333,
+            "lon": -83.936325,
+            "cat": 45447,
+            "code": "MAG"
+        },
+        {
+            "name": "North Carrick Hall",
+            "lat": 35.952183,
+            "lon": -83.934975,
+            "cat": 45447,
+            "code": "CHN"
+        },
+        {
+            "name": "Reese Hall",
+            "lat": 35.95285,
+            "lon": -83.934891,
+            "cat": 45447,
+            "code": "REE"
+        },
+        {
+            "name": "Hess Hall",
+            "lat": 35.954121,
+            "lon": -83.931435,
+            "cat": 45447,
+            "code": "HES"
+        },
+        {
+            "name": "Melrose Hall",
+            "lat": 35.954395,
+            "lon": -83.930695,
+            "cat": 45447,
+            "code": "MEL"
+        },
+        {
+            "name": "Stokely Hall",
+            "lat": 35.951904,
+            "lon": -83.928795,
+            "cat": 45451,
+            "code": "STK"
+        },
+        {
+            "name": "VolShop ",
+            "lat": 35.956879,
+            "lon": -83.932312,
+            "cat": 45452,
+            "code": "HOP"
+        },
+        {
+            "name": "Clement Hall",
+            "lat": 35.957363,
+            "lon": -83.932289,
+            "cat": 45452,
+            "code": "CLE"
+        },
+        {
+            "name": "Massey Hall",
+            "lat": 35.956043,
+            "lon": -83.93132,
+            "cat": 45452,
+            "code": "MSH"
+        },
+        {
+            "name": "Volunteer Hall",
+            "lat": 35.95916,
+            "lon": -83.930077,
+            "cat": 45452,
+            "code": "VOL"
+        },
+        {
+            "name": "Laurel Hall",
+            "lat": 35.959908,
+            "lon": -83.93232,
+            "cat": 55850,
+            "code": "LRH"
         }
     ],
     "parking": [
