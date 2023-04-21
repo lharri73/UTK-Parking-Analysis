@@ -38,14 +38,14 @@ def main():
         old_sizes = DictReader(f)
         for row in old_sizes:
             building_code_map.update({row["BUILDING NAME"]: row["REG CODE"]})
-    p = Parser(os.path.join(DATA_DIR, "parsed.json"))
+    p = Parser(os.path.join(DATA_DIR, "parsed3.json"))
 
     for i, b in enumerate(p.buildings):
         code = find_matching_building(building_code_map, b.name)
         p.buildings[i].code = code
 
     to_dump = p.to_json()
-    with open(os.path.join(DATA_DIR, "parsed2.json"), "w") as f:
+    with open(os.path.join(DATA_DIR, "parsed4.json"), "w") as f:
         json.dump(to_dump, f, indent=4)
 
 

@@ -18,11 +18,12 @@ class Parser:
             data = json.load(f)
         if isinstance(data, list):
             self.buildings = Building.parse_buildings(data)
-            self.parking = Building.parse_parking(data)
+            # self.parking = Building.parse_parking(data)
+            self.parking = []
         elif isinstance(data, dict):
             ## parsed already
             self.buildings = [
-                Building(b["name"], b["lat"], b["lon"], b["cat"])
+                Building(b["name"], b["lat"], b["lon"], b["cat"], b.get('code', None))
                 for b in data["buildings"]
             ]
             self.parking = [

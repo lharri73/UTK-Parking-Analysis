@@ -31,7 +31,12 @@ class Building:
 
     @classmethod
     def parse_buildings(cls, data):
-        academic_buildings = data[80]["children"]["locations"]
+        # academic_buildings = []
+
+        academic_buildings_map = map(lambda f: f["children"]["locations"], data)
+        academic_buildings = []
+        for b in academic_buildings_map:
+            academic_buildings.extend(b)
         buildings = map(
             lambda x: cls(x["name"], x["lat"], x["lng"], x["catId"]), academic_buildings
         )

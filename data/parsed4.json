@@ -12,14 +12,14 @@
             "lat": 35.968502,
             "lon": -83.937958,
             "cat": 3040,
-            "code": "UA1"
+            "code": "UA1-LEVEN"
         },
         {
             "name": "1610 University Avenue",
             "lat": 35.967449,
             "lon": -83.938538,
             "cat": 3040,
-            "code": "UA2"
+            "code": "UA2-LEVEN"
         },
         {
             "name": "1817 Melrose Avenue",
@@ -33,7 +33,7 @@
             "lat": 35.952579,
             "lon": -83.937531,
             "cat": 3040,
-            "code": "TA1" 
+            "code": "TA2-LEVEN"
         },
         {
             "name": "2106 Terrace Avenue",
@@ -54,7 +54,7 @@
             "lat": 35.945896,
             "lon": -83.930428,
             "cat": 3040,
-            "code": "WHS"
+            "code": "WHS-LEVEN"
         },
         {
             "name": "22nd Street Duplex",
@@ -68,14 +68,14 @@
             "lat": 35.953163,
             "lon": -83.93708,
             "cat": 3040,
-            "code": "DES"
+            "code": "-LEVEN"
         },
         {
             "name": "Alternative Energy Research Support Bldg 1",
             "lat": 35.941765,
             "lon": -83.947166,
             "cat": 3040,
-            "code": "AER"
+            "code": "AER-LEVEN"
         },
         {
             "name": "Alumni Memorial Building",
@@ -145,7 +145,7 @@
             "lat": 35.948719,
             "lon": -83.939987,
             "cat": 3040,
-            "code": "BES"
+            "code": "BES-LEVEN"
         },
         {
             "name": "BESS Tank & Equipment Storage",
@@ -159,14 +159,14 @@
             "lat": 35.948189,
             "lon": -83.94001,
             "cat": 3040,
-            "code": "BEL"
+            "code": "BEL-LEVEN"
         },
         {
             "name": "Biosystems Engineering and Environmental Sciences Office",
             "lat": 35.94878,
             "lon": -83.940567,
             "cat": 3040,
-            "code": "BEO"
+            "code": "BEO-LEVEN"
         },
         {
             "name": "Blount Hall",
@@ -194,7 +194,7 @@
             "lat": 36.004093,
             "lon": -83.859352,
             "cat": 3040,
-            "code": "BUR"
+            "code": "BUT-LEVEN"
         },
         {
             "name": "Business Incubator",
@@ -257,7 +257,7 @@
             "lat": 35.953922,
             "lon": -83.927185,
             "cat": 3040,
-            "code": "NUR"
+            "code": "BUT-LEVEN"
         },
         {
             "name": "UT Drive Services Building A",
@@ -306,7 +306,7 @@
             "lat": 35.95805,
             "lon": -83.95253,
             "cat": 3040,
-            "code": "VWB"
+            "code": "TEM-LEVEN"
         },
         {
             "name": "Veterinary Medical Center",
@@ -320,7 +320,7 @@
             "lat": 35.958443,
             "lon": -83.9524,
             "cat": 3040,
-            "code": "FLT"
+            "code": "FLT-LEVEN"
         },
         {
             "name": "Visitor Parking Information Center",
@@ -334,7 +334,7 @@
             "lat": 35.958755,
             "lon": -83.952972,
             "cat": 3040,
-            "code": "FLT"
+            "code": "BAS-LEVEN"
         },
         {
             "name": "Walters Academic Building",
@@ -348,21 +348,21 @@
             "lat": 35.95916,
             "lon": -83.953346,
             "cat": 3040,
-            "code": "FSC"
+            "code": "INC-LEVEN"
         },
         {
             "name": "William M. Bass Forensic Anthropology Building",
             "lat": 35.941101,
             "lon": -83.940224,
             "cat": 3040,
-            "code": "BAC"
+            "code": "BAC-LEVEN"
         },
         {
             "name": "Buehler Hall",
             "lat": 35.958408,
             "lon": -83.925262,
             "cat": 3040,
-            "code": "BUE"
+            "code": "GEI-LEVEN"
         },
         {
             "name": "Dougherty Engineering Building",
@@ -383,7 +383,7 @@
             "lat": 35.957123,
             "lon": -83.924492,
             "cat": 3040,
-            "code": "SRF"
+            "code": "SRF-LEVEN"
         },
         {
             "name": "Senter Hall",
@@ -397,7 +397,7 @@
             "lat": 35.946297,
             "lon": -83.938652,
             "cat": 3040,
-            "code": "SHD"
+            "code": "SHD-LEVEN"
         },
         {
             "name": "South College",
@@ -418,7 +418,7 @@
             "lat": 35.958672,
             "lon": -83.947311,
             "cat": 3040,
-            "code": "SPO"
+            "code": "SSB-LEVEN"
         },
         {
             "name": "Steam Plant",
@@ -488,28 +488,28 @@
             "lat": 35.959881,
             "lon": -83.953682,
             "cat": 3040,
-            "code": "KBC"
+            "code": "BLH-LEVEN"
         },
         {
             "name": "Operations Services",
             "lat": 35.958698,
             "lon": -83.954445,
             "cat": 3040,
-            "code": "OSB"
+            "code": "CRA-LEVEN"
         },
         {
             "name": "Landscape Storage",
             "lat": 35.958588,
             "lon": -83.954971,
             "cat": 3040,
-            "code": "LST"
+            "code": "FPS-LEVEN"
         },
         {
             "name": "Landscape Support",
             "lat": 35.958782,
             "lon": -83.954842,
             "cat": 3040,
-            "code": "LSP"
+            "code": "UGS-LEVEN"
         },
         {
             "name": "Conference Center Building",
@@ -530,14 +530,14 @@
             "lat": 35.945374,
             "lon": -83.937134,
             "cat": 3040,
-            "code": "CRB"
+            "code": "CRB-LEVEN"
         },
         {
             "name": "CRC-Material Science and Technology Unit",
             "lat": 35.945251,
             "lon": -83.937592,
             "cat": 3040,
-            "code": "CRM"
+            "code": "CRM-LEVEN"
         },
         {
             "name": "Crops Genetic Laboratory",
@@ -551,7 +551,7 @@
             "lat": 35.953442,
             "lon": -83.936989,
             "cat": 3040,
-            "code": "EL2"
+            "code": "EL2-LEVEN"
         },
         {
             "name": "Early Learning Center - Research & Practice",
@@ -656,7 +656,7 @@
             "lat": 35.956421,
             "lon": -83.93177,
             "cat": 3040,
-            "code": "HBC"
+            "code": "HBC-LEVEN"
         },
         {
             "name": "Humanities and Social Sciences Building",
@@ -691,7 +691,7 @@
             "lat": 35.958237,
             "lon": -83.929184,
             "cat": 3040,
-            "code": "LWT"
+            "code": "LWT-LEVEN"
         },
         {
             "name": "Law Complex: Law Library and Classroom Addition",
@@ -705,14 +705,14 @@
             "lat": 35.955719,
             "lon": -83.928719,
             "cat": 3040,
-            "code": "HBB"
+            "code": "HBB-LEVEN"
         },
         {
             "name": "James D. Hoskins Library",
             "lat": 35.958771,
             "lon": -83.927956,
             "cat": 3040,
-            "code": "HOS"
+            "code": "HOS-LEVEN"
         },
         {
             "name": "Jane and David Bailey Education Complex",
@@ -726,7 +726,7 @@
             "lat": 35.959267,
             "lon": -83.926308,
             "cat": 3040,
-            "code": "JHB"
+            "code": "JHB-LEVEN"
         },
         {
             "name": "Jewel Building",
@@ -740,21 +740,21 @@
             "lat": 35.955029,
             "lon": -83.929886,
             "cat": 3040,
-            "code": "LIB"
+            "code": "LIB-LEVEN"
         },
         {
             "name": "John D. Tickle Engineering Building",
             "lat": 35.955769,
             "lon": -83.922707,
             "cat": 3040,
-            "code": "TIC"
+            "code": "TIC-LEVEN"
         },
         {
             "name": "Institute for Advanced Materials and Manufacturing",
             "lat": 35.942631,
             "lon": -83.952499,
             "cat": 3040,
-            "code": "AMM"
+            "code": "AMM-LEVEN"
         },
         {
             "name": "McClung Tower and Plaza",
@@ -789,7 +789,7 @@
             "lat": 35.958523,
             "lon": -83.924568,
             "cat": 3040,
-            "code": "MKB"
+            "code": "MKB-LEVEN"
         },
         {
             "name": "Morgan Hall",
@@ -803,7 +803,7 @@
             "lat": 35.951962,
             "lon": -83.93071,
             "cat": 3040,
-            "code": "HMC"
+            "code": "HMC-LEVEN"
         },
         {
             "name": "Nielsen Physics Building",
@@ -831,14 +831,14 @@
             "lat": 35.948532,
             "lon": -83.939308,
             "cat": 3040,
-            "code": "RAC"
+            "code": "RAC-LEVEN"
         },
         {
             "name": "Radiological Safety - Old Cherokee Trail",
             "lat": 35.941143,
             "lon": -83.939949,
             "cat": 3040,
-            "code": "RAD"
+            "code": "RAD-LEVEN"
         },
         {
             "name": "Reese Hall Chiller",
@@ -852,7 +852,7 @@
             "lat": 35.995731,
             "lon": -83.9561,
             "cat": 3040,
-            "code": "RTT"
+            "code": "RTT-LEVEN"
         },
         {
             "name": "Ferris Hall",
@@ -866,7 +866,7 @@
             "lat": 35.959641,
             "lon": -83.927773,
             "cat": 3040,
-            "code": "FCM"
+            "code": "FCM-LEVEN"
         },
         {
             "name": "Fleet Management",
@@ -880,7 +880,7 @@
             "lat": 35.942524,
             "lon": -83.944946,
             "cat": 3040,
-            "code": "FAR"
+            "code": "FAR-LEVEN"
         },
         {
             "name": "Food Safety and Processing",
@@ -985,7 +985,7 @@
             "lat": 35.954762,
             "lon": -83.928032,
             "cat": 3040,
-            "code": "CLX"
+            "code": "CLX-LEVEN"
         },
         {
             "name": "Plant Biotechnology Building",
@@ -1020,14 +1020,14 @@
             "lat": 35.954247,
             "lon": -83.924683,
             "cat": 3040,
-            "code": "SSH"
+            "code": "SSH-LEVEN"
         },
         {
             "name": "Dabney Hall",
             "lat": 35.957905,
             "lon": -83.924889,
             "cat": 3040,
-            "code": "DAB"
+            "code": "MSH-LEVEN"
         },
         {
             "name": "Zeanah Engineering Complex",
@@ -1055,7 +1055,7 @@
             "lat": 35.942104,
             "lon": -83.947845,
             "cat": 3040,
-            "code": "FSB"
+            "code": "EL1-LEVEN"
         },
         {
             "name": "Animal Shelter",
