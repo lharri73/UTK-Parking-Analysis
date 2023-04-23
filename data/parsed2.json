@@ -1,0 +1,1007 @@
+{
+    "buildings": [
+        {
+            "name": "Brehm Animal Science",
+            "lat": 35.947029,
+            "lon": -83.941757,
+            "cat": 3040,
+            "code": "BAS"
+        },
+        {
+            "name": "1610 University Avenue",
+            "lat": 35.967449,
+            "lon": -83.938538,
+            "cat": 3040,
+            "code": "UA2"
+        },
+        {
+            "name": "Alumni Memorial Building",
+            "lat": 35.956013,
+            "lon": -83.926315,
+            "cat": 3040,
+            "code": "AMB"
+        },
+        {
+            "name": "Andy Holt Tower",
+            "lat": 35.952068,
+            "lon": -83.925842,
+            "cat": 3040,
+            "code": "AHT"
+        },
+        {
+            "name": "Art and Architecture Building",
+            "lat": 35.952648,
+            "lon": -83.929657,
+            "cat": 3040,
+            "code": "AAB"
+        },
+        {
+            "name": "Austin Peay Building",
+            "lat": 35.957115,
+            "lon": -83.92701,
+            "cat": 3040,
+            "code": "APB"
+        },
+        {
+            "name": "Ayres Hall",
+            "lat": 35.957497,
+            "lon": -83.925987,
+            "cat": 3040,
+            "code": "AYR"
+        },
+        {
+            "name": "Biosystems Engineering and Environmental Sciences Office",
+            "lat": 35.94878,
+            "lon": -83.940567,
+            "cat": 3040,
+            "code": "BEO"
+        },
+        {
+            "name": "Blount Hall",
+            "lat": 35.958549,
+            "lon": -83.929337,
+            "cat": 3040,
+            "code": "BLH"
+        },
+        {
+            "name": "Burchfiel Geography Building",
+            "lat": 35.956589,
+            "lon": -83.92749,
+            "cat": 3040,
+            "code": "BGB"
+        },
+        {
+            "name": "Tyson Alumni Center",
+            "lat": 35.955757,
+            "lon": -83.930176,
+            "cat": 3040,
+            "code": "TYS"
+        },
+        {
+            "name": "Ceramics Annex",
+            "lat": 35.94968,
+            "lon": -83.94101,
+            "cat": 3040,
+            "code": "CRA"
+        },
+        {
+            "name": "Ceramics Building",
+            "lat": 35.952766,
+            "lon": -83.930016,
+            "cat": 3040,
+            "code": "CER"
+        },
+        {
+            "name": "UT Drive Services Building C",
+            "lat": 35.948517,
+            "lon": -83.93502,
+            "cat": 3040,
+            "code": "UDC"
+        },
+        {
+            "name": "Veterinary Medical Center",
+            "lat": 35.945618,
+            "lon": -83.940086,
+            "cat": 3040,
+            "code": "VMC"
+        },
+        {
+            "name": "Walters Academic Building",
+            "lat": 35.957195,
+            "lon": -83.927673,
+            "cat": 3040,
+            "code": "WAB"
+        },
+        {
+            "name": "William M. Bass Forensic Anthropology Building",
+            "lat": 35.941101,
+            "lon": -83.940224,
+            "cat": 3040,
+            "code": "BAC"
+        },
+        {
+            "name": "Dougherty Engineering Building",
+            "lat": 35.957821,
+            "lon": -83.924011,
+            "cat": 3040,
+            "code": "DOU"
+        },
+        {
+            "name": "Dunford Hall",
+            "lat": 35.956062,
+            "lon": -83.930252,
+            "cat": 3040,
+            "code": "DUN"
+        },
+        {
+            "name": "Science & Engineering Building",
+            "lat": 35.957123,
+            "lon": -83.924492,
+            "cat": 3040,
+            "code": "SRF"
+        },
+        {
+            "name": "South Greenhouse",
+            "lat": 35.944599,
+            "lon": -83.937019,
+            "cat": 3040,
+            "code": "SGH"
+        },
+        {
+            "name": "Stokely Management Center",
+            "lat": 35.956219,
+            "lon": -83.929024,
+            "cat": 3040,
+            "code": "SMC"
+        },
+        {
+            "name": "Student Services Building",
+            "lat": 35.952358,
+            "lon": -83.926201,
+            "cat": 3040,
+            "code": "SSB"
+        },
+        {
+            "name": "Conference Center Building",
+            "lat": 35.962372,
+            "lon": -83.921219,
+            "cat": 3040,
+            "code": "CCB"
+        },
+        {
+            "name": "CRC-Bioenergy Science and Technology Unit",
+            "lat": 35.945374,
+            "lon": -83.937134,
+            "cat": 3040,
+            "code": "CRB"
+        },
+        {
+            "name": "CRC-Material Science and Technology Unit",
+            "lat": 35.945251,
+            "lon": -83.937592,
+            "cat": 3040,
+            "code": "CRM"
+        },
+        {
+            "name": "Early Learning Center - Research & Practice",
+            "lat": 35.959747,
+            "lon": -83.926147,
+            "cat": 3040,
+            "code": "ELC"
+        },
+        {
+            "name": "Nursing Education Building",
+            "lat": 35.956814,
+            "lon": -83.924934,
+            "cat": 3040,
+            "code": "NEB"
+        },
+        {
+            "name": "Environment and Landscape Laboratory",
+            "lat": 35.944984,
+            "lon": -83.937393,
+            "cat": 3040,
+            "code": "ELL"
+        },
+        {
+            "name": "Feed Storage Building",
+            "lat": 35.942245,
+            "lon": -83.945457,
+            "cat": 3040,
+            "code": "FSB"
+        },
+        {
+            "name": "Silverstein Luper Building",
+            "lat": 35.954021,
+            "lon": -83.926109,
+            "cat": 3040,
+            "code": "SLB"
+        },
+        {
+            "name": "Henson Hall",
+            "lat": 35.956577,
+            "lon": -83.930687,
+            "cat": 3040,
+            "code": "HNH"
+        },
+        {
+            "name": "Hesler Biology Building and Greenhouse",
+            "lat": 35.956547,
+            "lon": -83.926338,
+            "cat": 3040,
+            "code": "HBG"
+        },
+        {
+            "name": "Howard H. Baker Jr. Center for Public Policy",
+            "lat": 35.956421,
+            "lon": -83.93177,
+            "cat": 3040,
+            "code": "HBC"
+        },
+        {
+            "name": "Humanities and Social Sciences Building",
+            "lat": 35.953667,
+            "lon": -83.929024,
+            "cat": 3040,
+            "code": "HSS"
+        },
+        {
+            "name": "International House",
+            "lat": 35.954945,
+            "lon": -83.93158,
+            "cat": 3040,
+            "code": "INH"
+        },
+        {
+            "name": "Kingston Pike Building",
+            "lat": 35.955975,
+            "lon": -83.944534,
+            "cat": 3040,
+            "code": "KPB"
+        },
+        {
+            "name": "Law Complex: George C. Taylor Wing",
+            "lat": 35.958237,
+            "lon": -83.929184,
+            "cat": 3040,
+            "code": "LWT"
+        },
+        {
+            "name": "James A. Haslam II Business Building",
+            "lat": 35.955719,
+            "lon": -83.928719,
+            "cat": 3040,
+            "code": "HBB"
+        },
+        {
+            "name": "James D. Hoskins Library",
+            "lat": 35.958771,
+            "lon": -83.927956,
+            "cat": 3040,
+            "code": "HOS"
+        },
+        {
+            "name": "Jane and David Bailey Education Complex",
+            "lat": 35.954369,
+            "lon": -83.927582,
+            "cat": 3040,
+            "code": "BEC"
+        },
+        {
+            "name": "Jessie W. Harris Building",
+            "lat": 35.959267,
+            "lon": -83.926308,
+            "cat": 3040,
+            "code": "JHB"
+        },
+        {
+            "name": "John C. Hodges Library",
+            "lat": 35.955029,
+            "lon": -83.929886,
+            "cat": 3040,
+            "code": "LIB"
+        },
+        {
+            "name": "John D. Tickle Engineering Building",
+            "lat": 35.955769,
+            "lon": -83.922707,
+            "cat": 3040,
+            "code": "TIC"
+        },
+        {
+            "name": "Institute for Advanced Materials and Manufacturing",
+            "lat": 35.942631,
+            "lon": -83.952499,
+            "cat": 3040,
+            "code": "AMM"
+        },
+        {
+            "name": "McClung Tower and Plaza",
+            "lat": 35.954056,
+            "lon": -83.92897,
+            "cat": 3040,
+            "code": "MCT"
+        },
+        {
+            "name": "McCord Hall",
+            "lat": 35.948673,
+            "lon": -83.942986,
+            "cat": 3040,
+            "code": "MCH"
+        },
+        {
+            "name": "Melrose Hall",
+            "lat": 35.954628,
+            "lon": -83.930565,
+            "cat": 3040,
+            "code": "MEL"
+        },
+        {
+            "name": "Middlebrook Building",
+            "lat": 35.955177,
+            "lon": -84.009529,
+            "cat": 3040,
+            "code": "MID"
+        },
+        {
+            "name": "Min H. Kao Electrical Engineering and Computer Science",
+            "lat": 35.958523,
+            "lon": -83.924568,
+            "cat": 3040,
+            "code": "MKB"
+        },
+        {
+            "name": "Morgan Hall",
+            "lat": 35.949055,
+            "lon": -83.941956,
+            "cat": 3040,
+            "code": "MGH"
+        },
+        {
+            "name": "Natalie Haslam Music Center",
+            "lat": 35.951962,
+            "lon": -83.93071,
+            "cat": 3040,
+            "code": "HMC"
+        },
+        {
+            "name": "Nielsen Physics Building",
+            "lat": 35.956547,
+            "lon": -83.925507,
+            "cat": 3040,
+            "code": "PHY"
+        },
+        {
+            "name": "Ferris Hall",
+            "lat": 35.956741,
+            "lon": -83.923424,
+            "cat": 3040,
+            "code": "FER"
+        },
+        {
+            "name": "Food Safety and Processing",
+            "lat": 35.948288,
+            "lon": -83.942757,
+            "cat": 3040,
+            "code": "FSP"
+        },
+        {
+            "name": "Food Science Building",
+            "lat": 35.947693,
+            "lon": -83.942131,
+            "cat": 3040,
+            "code": "FSB"
+        },
+        {
+            "name": "Greve Hall",
+            "lat": 35.956181,
+            "lon": -83.930954,
+            "cat": 3040,
+            "code": "GRV"
+        },
+        {
+            "name": "Perkins Hall",
+            "lat": 35.956409,
+            "lon": -83.924049,
+            "cat": 3040,
+            "code": "PER"
+        },
+        {
+            "name": "Philander P. Claxton Education Building",
+            "lat": 35.954762,
+            "lon": -83.928032,
+            "cat": 3040,
+            "code": "CLX"
+        },
+        {
+            "name": "Plant Biotechnology Building",
+            "lat": 35.948296,
+            "lon": -83.941277,
+            "cat": 3040,
+            "code": "PBB"
+        },
+        {
+            "name": "South & East Stadium Halls",
+            "lat": 35.954247,
+            "lon": -83.924683,
+            "cat": 3040,
+            "code": "SSH"
+        },
+        {
+            "name": "Zeanah Engineering Complex",
+            "lat": 35.955879,
+            "lon": -83.923531,
+            "cat": 3040,
+            "code": "ZEC"
+        },
+        {
+            "name": "Third Creek Building",
+            "lat": 35.947121,
+            "lon": -83.938499,
+            "cat": 3040,
+            "code": "TCB"
+        },
+        {
+            "name": "Health, Physical Education, and Recreation Building",
+            "lat": 35.951878,
+            "lon": -83.93264,
+            "cat": 3040,
+            "code": "HPR"
+        },
+        {
+            "name": "Facilities Services Complex",
+            "lat": 35.958408,
+            "lon": -83.947968,
+            "cat": 3040,
+            "code": "FSC"
+        },
+        {
+            "name": "Clarence Brown Theatre",
+            "lat": 35.953232,
+            "lon": -83.930634,
+            "cat": 3041,
+            "code": "CBT"
+        },
+        {
+            "name": "Frank H. McClung Museum of Natural History and Culture",
+            "lat": 35.951996,
+            "lon": -83.927223,
+            "cat": 3041,
+            "code": "MCM"
+        },
+        {
+            "name": "Carrick Hall South",
+            "lat": 35.951839,
+            "lon": -83.934776,
+            "cat": 3042,
+            "code": "CHS"
+        },
+        {
+            "name": "Dogwood Hall",
+            "lat": 35.950817,
+            "lon": -83.93689,
+            "cat": 3042,
+            "code": "DOG"
+        },
+        {
+            "name": "Robinson Hall",
+            "lat": 35.951725,
+            "lon": -83.935555,
+            "cat": 3042,
+            "code": "ROB"
+        },
+        {
+            "name": "Stokely Hall",
+            "lat": 35.951706,
+            "lon": -83.928833,
+            "cat": 3042,
+            "code": "STK"
+        },
+        {
+            "name": "Geier Hall",
+            "lat": 35.952114,
+            "lon": -83.936035,
+            "cat": 3042,
+            "code": "GEI"
+        },
+        {
+            "name": "Frank G. Clement Hall",
+            "lat": 35.957253,
+            "lon": -83.932281,
+            "cat": 3042,
+            "code": "CLE"
+        },
+        {
+            "name": "Magnolia Hall",
+            "lat": 35.950382,
+            "lon": -83.93634,
+            "cat": 3042,
+            "code": "MAG"
+        },
+        {
+            "name": "Anderson Training Center",
+            "lat": 35.949764,
+            "lon": -83.927406,
+            "cat": 3043,
+            "code": "ATC"
+        },
+        {
+            "name": "Thompson-Boling Assembly Center and Arena",
+            "lat": 35.951164,
+            "lon": -83.924942,
+            "cat": 3043,
+            "code": "TBA"
+        },
+        {
+            "name": "Brenda Lawson Athletic Center",
+            "lat": 35.950184,
+            "lon": -83.92717,
+            "cat": 3043,
+            "code": "LAC"
+        },
+        {
+            "name": "Thornton Athletics Student Life Center",
+            "lat": 35.951077,
+            "lon": -83.931259,
+            "cat": 3043,
+            "code": "THO"
+        },
+        {
+            "name": "Wayne G. Basler Boathouse",
+            "lat": 35.955345,
+            "lon": -83.921967,
+            "cat": 3043,
+            "code": "WBB"
+        },
+        {
+            "name": "Sherri Parker Lee Stadium",
+            "lat": 35.945557,
+            "lon": -83.934875,
+            "cat": 3043,
+            "code": "SLS"
+        },
+        {
+            "name": "Lindsey Nelson Stadium",
+            "lat": 35.949352,
+            "lon": -83.92984,
+            "cat": 3043,
+            "code": "LNS"
+        },
+        {
+            "name": "Joan Cronan Volleyball Practice Facility",
+            "lat": 35.946266,
+            "lon": -83.931427,
+            "cat": 3043,
+            "code": "JVP"
+        },
+        {
+            "name": "Goodfriend Tennis Center",
+            "lat": 35.95153,
+            "lon": -83.9366,
+            "cat": 3043,
+            "code": "GTC"
+        },
+        {
+            "name": "Pratt Pavilion",
+            "lat": 35.950169,
+            "lon": -83.925682,
+            "cat": 3043,
+            "code": "PRT"
+        },
+        {
+            "name": "Sorority Village Center",
+            "lat": 35.950508,
+            "lon": -83.945221,
+            "cat": 28180,
+            "code": "SVC"
+        },
+        {
+            "name": "UT Culinary Institute and Creamery",
+            "lat": 35.950314,
+            "lon": -83.947327,
+            "cat": 28192,
+            "code": "CIC"
+        },
+        {
+            "name": "Student Aquatic Center",
+            "lat": 35.949924,
+            "lon": -83.935135,
+            "cat": 28192,
+            "code": "AQU"
+        },
+        {
+            "name": "Student Health Center",
+            "lat": 35.950378,
+            "lon": -83.930695,
+            "cat": 28192,
+            "code": "SHC"
+        },
+        {
+            "name": "Intramural Fields Pavilion",
+            "lat": 35.944492,
+            "lon": -83.979759,
+            "cat": 28192,
+            "code": "IFP"
+        },
+        {
+            "name": "Health, Physical Education, and Recreation Building",
+            "lat": 35.951878,
+            "lon": -83.93264,
+            "cat": 28192,
+            "code": "HPR"
+        },
+        {
+            "name": "Dogwood",
+            "lat": 35.950703,
+            "lon": -83.936798,
+            "cat": 45447,
+            "code": "DOG"
+        },
+        {
+            "name": "Magnolia",
+            "lat": 35.950333,
+            "lon": -83.936325,
+            "cat": 45447,
+            "code": "MAG"
+        },
+        {
+            "name": "Melrose Hall",
+            "lat": 35.954395,
+            "lon": -83.930695,
+            "cat": 45447,
+            "code": "MEL"
+        },
+        {
+            "name": "Stokely Hall",
+            "lat": 35.951904,
+            "lon": -83.928795,
+            "cat": 45451,
+            "code": "STK"
+        },
+        {
+            "name": "Clement Hall",
+            "lat": 35.957363,
+            "lon": -83.932289,
+            "cat": 45452,
+            "code": "CLE"
+        }
+    ],
+    "parking": [
+        {
+            "name": "C25 (Sherri Parker Lee Stadium)",
+            "lat": 35.945881,
+            "lon": -83.935921,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "C22 (Frat Park/CSX)",
+            "lat": 35.94772,
+            "lon": -83.934334,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "C3 (Phillip Fulmer Way)",
+            "lat": 35.952248,
+            "lon": -83.925186,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "G10 (Phillip Fulmer Way & Neyland Drive)",
+            "lat": 35.953709,
+            "lon": -83.923859,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "C2 (Neyland Garage)",
+            "lat": 35.952766,
+            "lon": -83.924232,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "S12/C21/N4 (White Ave. Garage)",
+            "lat": 35.958065,
+            "lon": -83.932068,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "S6/S7/C19/M&R (11th Street Garage)",
+            "lat": 35.959652,
+            "lon": -83.92527,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "C5 (Lake Loudon Blvd Garage)",
+            "lat": 35.951546,
+            "lon": -83.92688,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "C4 (Ag Campus)",
+            "lat": 35.949844,
+            "lon": -83.940971,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "C10 (Lindsey Nelson Stadium)",
+            "lat": 35.949242,
+            "lon": -83.928558,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "C26 (United Methodist Church)",
+            "lat": 35.959324,
+            "lon": -83.921906,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "CF (AG Campus: River Dr.)",
+            "lat": 35.947056,
+            "lon": -83.942734,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "SC40 parking lot (Tyson McGhee Park St. SW)",
+            "lat": 35.955437,
+            "lon": -83.943741,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "G16 (C9/S23/N15) (Pat Head Summit St & Volunteer BLVD)",
+            "lat": 35.951233,
+            "lon": -83.929726,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "C8 (Volunteer & Lake Loudon)",
+            "lat": 35.952381,
+            "lon": -83.928024,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "G17/C12/N24/S12 (Terrace Ave)",
+            "lat": 35.9547,
+            "lon": -83.933907,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "SCN1 (Andy Holt Ave)",
+            "lat": 35.950794,
+            "lon": -83.934052,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "C6 (Lake Loudon Blvd/Andy Holt Tower)",
+            "lat": 35.951233,
+            "lon": -83.926498,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "SC1 (Volunteer Blvd to Andy Holt Ave)",
+            "lat": 35.947754,
+            "lon": -83.936165,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "SCN (Volunteer Blvd)",
+            "lat": 35.951229,
+            "lon": -83.938972,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "GF2/GF3/GF4 (Todd Helton Dr)",
+            "lat": 35.947826,
+            "lon": -83.931747,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "C18 (Senter Hall)",
+            "lat": 35.959694,
+            "lon": -83.928665,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "S7/C (Cumberland Ave & 2nd Creek)",
+            "lat": 35.958286,
+            "lon": -83.923195,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "C1 (Lindsey Nelson Stadium)",
+            "lat": 35.948357,
+            "lon": -83.930183,
+            "cat": 28181,
+            "code": null
+        },
+        {
+            "name": "N2 (Terrace Ave & Volunteer Blvd)",
+            "lat": 35.951607,
+            "lon": -83.938385,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "G11/N6 (Terrace Ave)",
+            "lat": 35.954205,
+            "lon": -83.934776,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N21 (Laurel Ave & Volunteer Blvd)",
+            "lat": 35.959129,
+            "lon": -83.931862,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "G15/N17 (Volunteer Hall)",
+            "lat": 35.959183,
+            "lon": -83.930069,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N10 (Lake Ave & S 21st St)",
+            "lat": 35.953117,
+            "lon": -83.937996,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N20 (Caledonia Ave)",
+            "lat": 35.95274,
+            "lon": -83.936066,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N7 (Volunter Blvd & Andy Holt Ave)",
+            "lat": 35.950039,
+            "lon": -83.937637,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N9 (Caledonia Ave)",
+            "lat": 35.951893,
+            "lon": -83.937622,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N5 (Caledonia Ave)",
+            "lat": 35.952297,
+            "lon": -83.935532,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N14 (Highland Ave & 16th Street)",
+            "lat": 35.960304,
+            "lon": -83.932732,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N11 (Lake Ave & 22nd St)",
+            "lat": 35.952736,
+            "lon": -83.938843,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N19 (Terrace Ave & Caledonia Ave",
+            "lat": 35.952305,
+            "lon": -83.937141,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N8 (Caledonia Ave)",
+            "lat": 35.953037,
+            "lon": -83.934937,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N12 (Lake Ave & 22nd St)",
+            "lat": 35.95229,
+            "lon": -83.939072,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "G16 (Pat Head Summitt St & Volunter BLVD)",
+            "lat": 35.951584,
+            "lon": -83.929474,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N18 (Terrace Ave & 22nd St)",
+            "lat": 35.952198,
+            "lon": -83.938377,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N13 (Lake Ave)",
+            "lat": 35.953972,
+            "lon": -83.93708,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N22 (Lake Ave & Mount Castle St SW)",
+            "lat": 35.9534,
+            "lon": -83.936333,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N23 (Andy Holt Ave)",
+            "lat": 35.950722,
+            "lon": -83.935539,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "N3 (Terrace Ave & Melrose Place)",
+            "lat": 35.953842,
+            "lon": -83.934113,
+            "cat": 28182,
+            "code": null
+        },
+        {
+            "name": "PC1 (S. Broadway & W. Hill)",
+            "lat": 35.958809,
+            "lon": -83.920418,
+            "cat": 56206,
+            "code": null
+        },
+        {
+            "name": "PC2 (University Commons)",
+            "lat": 35.951099,
+            "lon": -83.941101,
+            "cat": 56206,
+            "code": null
+        },
+        {
+            "name": "PC3 (Neyland Dr SW)",
+            "lat": 35.949631,
+            "lon": -83.946571,
+            "cat": 56206,
+            "code": null
+        },
+        {
+            "name": "PN (Tyson McGhee Park St. SW)",
+            "lat": 35.954746,
+            "lon": -83.942589,
+            "cat": 56208,
+            "code": null
+        }
+    ]
+}

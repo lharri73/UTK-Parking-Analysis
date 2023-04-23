@@ -11,7 +11,7 @@ data_file = os.path.join(os.path.dirname(__file__), "..", "data")
 
 
 def main():
-    p = Parser(os.path.join(data_file, "parsed.json"))
+    p = Parser(os.path.join(data_file, "parsed2.json"))
     with open(os.path.join(data_file, "sizes.json"), "r") as f:
         cur_sizes = json.load(f)
 
