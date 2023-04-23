@@ -7,4 +7,5 @@ setup(
     version="0.0.1",
     install_requires=requirements,
     packages=find_packages(),
+    license="GPL-3.0-or-later"
 )
