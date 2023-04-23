@@ -1,4 +1,5 @@
 import json
+
 # import googlemaps
 import os
 
@@ -45,9 +46,9 @@ def generate_to_buildings(p):
 
 def main():
     p = Parser(os.path.join(DATA_DIR, "parsed.json"))
-    # generate_to_garages(p)
-    # generate_btwn_garages(p)
-    # generate_to_buildings(p)
+    generate_to_garages(p)
+    generate_btwn_garages(p)
+    generate_to_buildings(p)
 
     # buildings, parking = p.construct_requests()
     # origins = origins[:10]
