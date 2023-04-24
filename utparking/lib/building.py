@@ -18,7 +18,12 @@ class Building:
         return f"<Building: '{self.name}' at ({self.lat}, {self.lon})>"
 
     def __eq__(self, other):
-        return self.name == other.name
+        if isinstance(other, Building):
+            return self.name == other.name
+        elif isinstance(other, str):
+            return self.name == other
+        else:
+            raise RuntimeError("Unknown type to compare for equality")
 
     def to_json(self):
         return {
