@@ -1,7 +1,7 @@
 import json
 import os
 import random
-import time
+import time as pytime
 from enum import Enum, IntEnum, auto
 from functools import reduce
 from operator import add
@@ -10,6 +10,7 @@ import numpy as np
 
 from utparking.lib.log import get_logger
 from utparking.lib.map_parser import Parser
+from utparking.lib.time_utils import Ticker
 
 
 class State(Enum):
@@ -18,6 +19,7 @@ class State(Enum):
     searching = auto()
     parking = auto()
     parked = auto()
+    stuck = auto()
 
 
 class TravelMetric(IntEnum):
@@ -26,6 +28,7 @@ class TravelMetric(IntEnum):
 
 
 cur_idx = 0
+GLOBAL_TIME = Ticker()
 
 
 class Parking:
@@ -38,7 +41,7 @@ class Parking:
 
     def add_student(self, idx, agressive):
         time_to_comp = self.search_time * (len(self.parked) / self.capacity) * agressive
-        done_time = time.time() + time_to_comp
+        done_time = GLOBAL_TIME() + time_to_comp
         item = [idx, done_time]
         self.searching.append(item)
 
@@ -60,7 +63,7 @@ class Parking:
             return 0
 
         # Check to see if done waiting
-        cur_time = time.time()
+        cur_time = GLOBAL_TIME()
         if cur_time >= self.searching[0][1]:
             self.searching.pop(0)
             if len(self.parked) >= self.capacity:
@@ -81,7 +84,7 @@ class Student:
     prob_retry_lot: float  # probability that the student will retry a lot they have already looked for a spot in
     dest_idx: int  # idx of the building the student is trying to get to
 
-    def __init__(self, runner, dest_idx, global_speed_adj=1.0):
+    def __init__(self, runner, dest_idx, global_speed_adj=1.0, genome=None):
         """
         :param runner: reference to the runner object
         """
@@ -115,7 +118,7 @@ class Student:
                 self.runner.dist_met, self.going_to, self.dest_idx
             ]
             travel_time *= self.speed_adj
-            self.wait_until = time.time() + travel_time
+            self.wait_until = GLOBAL_TIME() + travel_time
 
             self.state = State.traveling
         elif self.state == State.traveling:
@@ -123,7 +126,7 @@ class Student:
             assert (
                 self.wait_until is not None
             ), "did not set a time to wait until. This student will wait forever <dun dun dunnn>"
-            if time.time() >= self.wait_until:
+            if GLOBAL_TIME() >= self.wait_until:
                 self.state = State.parking
                 self.wait_until = None
                 self.runner.parking[self.going_to].add_student(self.id, self.agressive)
@@ -151,25 +154,39 @@ class Student:
                 break
             else:
                 # If we've tried all other parking garages
-                raise ValueError("Student ran out of parking!")
+                self.state = State.stuck
+                # raise ValueError("Student ran out of parking!")
             travel_time = self.runner.to_b[
                 self.runner.dist_met, self.going_to, self.dest_idx
             ]
             travel_time *= self.speed_adj
-            self.wait_until = time.time() + travel_time
+            self.wait_until = GLOBAL_TIME() + travel_time
             self.state = State.traveling
 
         elif self.state == State.parked:
             # Do nothing...for now, do we make them eventually move?
             return
+        elif self.state == State.stuck:
+            print(f"student {self.id} going to {self.dest_idx} tried {len(self.garages_tried)} locations and is stuck")
+            return
         else:
             raise ValueError(f"Unknown state for student {self.id}")
+    
 
     def __str__(self):
         return f"<Student {self.id} who is {self.state} going to {self.dest_idx}>"
 
     def __repr__(self):
         return str(self)
+    
+    def fitness(self):
+        if self.state == State.parked:
+            travel_time = self.runner.to_b[self.runner.dist_met, self.going_to, self.dest_idx]
+            max_time = np.max(self.runner.to_b[self.runner.dist_met, :, self.dest_idx])
+            f = travel_time / max_time
+            return f
+        else:
+            return 0
 
 
 class Runner:
@@ -207,21 +224,25 @@ class Runner:
         self.log.debug(
             f"Found {len(self.parser.buildings)} buildings with {self.max_occ} occuancy limit"
         )
+        self.max_parks = int(parking_limit/vehicle_occupancy)
         self.log.debug(
-            f"Found {len(self.parser.parking)} parking areas with {int(parking_limit/vehicle_occupancy)} spaces"
+            f"Found {len(self.parser.parking)} parking areas with {self.max_parks} spaces"
         )
-
+        
         self.log.info("Runner initialization complete")
+        
 
-    def setup_run(self):
+    def setup_run(self, student_genomes=None):
         self.log.debug("Creating students")
         self.students = []
+        i=0
         for b_name, b_cap in self.sizes["buildings"].items():
             for _ in range(b_cap):
                 d_idx = self.parser.buildings.index(b_name)
                 self.students.append(
                     Student(self, d_idx, global_speed_adj=1 / self.time_scale)
                 )
+                i += 1
         self.log.info(f"Created {len(self.students)} student objects")
         self.log.debug(f"Creaint Parking Areas")
         self.parking = []
@@ -229,11 +250,22 @@ class Runner:
             self.parking.append(Parking(p_name, p_cap, 3.3 * self.time_scale))
         self.log.info(f"Created {len(self.parking)} parking objects")
 
+    def num_students(self):
+        s = reduce(add, self.sizes["buildings"].values(), 0)
+        return s
+    
+    def reset(self):
+        GLOBAL_TIME.reset()
+        self.students = []
+        self.parking = []
+
+
     def print_stats(self):
         stats = {data: 0 for data in State}
         for student in self.students:
             stats[student.state] += 1
         print(stats)
+        return stats
 
     def run(self):
         print("start")
@@ -241,15 +273,21 @@ class Runner:
         tim = 0
         while True:
             i += 1
-            tic = time.time()
+            tic = pytime.time()
             for student in self.students:
                 student.tick()
-            toc = time.time()
+            toc = pytime.time()
             tim = tim * 0.99 + (toc - tic) * 0.01
 
             if i % 100 == 0:
-                self.print_stats()
+                stats = self.print_stats()
                 print(f"avg process time: {tim:0.4f}s")
+                if stats[State.parked] == self.max_parks:
+                    break
+            GLOBAL_TIME.tick()
+
+        fitnesses = [s.fitness() for s in self.students]
+        return fitnesses
 
 
 def test_func():
