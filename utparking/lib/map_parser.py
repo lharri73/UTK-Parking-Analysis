@@ -30,9 +30,9 @@ class Parser:
                 Building(b["name"], b["lat"], b["lon"], b["cat"])
                 for b in data["parking"]
             ]
-        self.client = googlemaps.Client(
-            os.environ.get("MAPS_API_KEY", "INVALID_KEY-CHANGE_ME")
-        )
+        # self.client = googlemaps.Client(
+        #     os.environ.get("MAPS_API_KEY", "INVALID_KEY-CHANGE_ME")
+        # )
         self.results_folder = results_folder
         self.results_counter = 0
         self.distance_matrix = np.empty((2, len(self.buildings), len(self.parking)))
