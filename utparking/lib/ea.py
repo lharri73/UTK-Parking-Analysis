@@ -1,5 +1,7 @@
-import numpy as np
 import multiprocessing
+
+import numpy as np
+
 
 class EA:
     def __init__(self, runner, seed=3141):
@@ -14,8 +16,8 @@ class EA:
         :param p1: parent 1
         :param p2: parent 2
         """
-        if (np.random.random() < p_c):
-            ind_len, = p1.shape
+        if np.random.random() < p_c:
+            (ind_len,) = p1.shape
             c1 = np.zeros_like(p1)
             c2 = np.zeros_like(p2)
             rand = np.random.random((ind_len,))
@@ -35,7 +37,7 @@ class EA:
         :param p_m: probability of mutation
         :param p: parent genome
         """
-        ind_len, = p.shape
+        (ind_len,) = p.shape
         c = p.copy()
         rand = np.random.random((ind_len,))
         msk = rand < p_m
@@ -51,44 +53,56 @@ class EA:
         ret = tourn[best]
 
         return ret
-    
+
     def run(self, generations=100, p_c=0.5, p_m=0.01):
         # self.exp.setup_run(student_genomes=children)
         ind_len = 18
 
-        population = np.random.randint(0,2,(self.num_students, ind_len), dtype=np.uint8)
+        population = np.random.randint(
+            0, 2, (self.num_students, ind_len), dtype=np.uint8
+        )
         mean_fits = []
         max_fits = []
+        fits = []
+        pops = []
 
         for g in range(generations):
             children = np.zeros((self.num_students, ind_len), dtype=np.uint8)
             self.exp.setup_run(student_genomes=population)
             fitnesses = self.exp.run()
+            fits.append(fitnesses)
+            pops.append(population)
             mean_fits.append(np.mean(fitnesses))
             max_fits.append(np.max(fitnesses))
 
-            print("Generation: %d, Mean Fitness: %f, Max Fitness: %f" % (g, mean_fits[-1], max_fits[-1]))
+            print(
+                "Generation: %d, Mean Fitness: %f, Max Fitness: %f"
+                % (g, mean_fits[-1], max_fits[-1])
+            )
 
             print("start tourn selec")
-            fs = [fitnesses]*self.num_students
-            tss = [3]*self.num_students
+            fs = [fitnesses] * self.num_students
+            tss = [3] * self.num_students
             seeds = self.seeder.spawn(self.num_students)
             with multiprocessing.Pool(12) as pool:
                 parents = pool.map(trn_selection, zip(fs, tss, seeds))
-            print('done')
+            print("done")
 
             print("start crossover/mutation")
-            for i in range(0, (self.num_students//2)*2, 2):
-                c1, c2 = self.uniform_crossover(p_c, population[parents[i]], population[parents[i+1]])
+            for i in range(0, (self.num_students // 2) * 2, 2):
+                c1, c2 = self.uniform_crossover(
+                    p_c, population[parents[i]], population[parents[i + 1]]
+                )
                 c1 = self.mutation(p_m, c1)
                 c2 = self.mutation(p_m, c2)
-                children[i,:] = c1[:]
-                children[i+1,:] = c2[:]
-            print('done')
+                children[i, :] = c1[:]
+                children[i + 1, :] = c2[:]
+            print("done")
 
         population = children
 
-        return mean_fits, max_fits
+        return mean_fits, max_fits, fits, pops
+
 
 def trn_selection(args):
     fitnesses, ts, gen = args
