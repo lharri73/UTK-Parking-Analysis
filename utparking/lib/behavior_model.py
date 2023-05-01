@@ -101,11 +101,12 @@ class Student:
         self.garages_tried = []
         self.dest_idx = dest_idx
         self.state = State.initial_search
+        self.parked_at = None
 
         if genome is None:
             self.speed_adj = (random.randrange(128 + 64, 256) / 256.0) * global_speed_adj
             self.agressive = random.randrange(128, 256 + 128) / 256.0
-            self.policy = Policy.closest
+            self.policy = random.choice(list(Policy))
         else:
             genome = np.packbits(genome)[0]
             self.speed_adj = (((genome & 0xff) / 256.0)+0.5) * global_speed_adj # 0.5-1.5
@@ -171,6 +172,7 @@ class Student:
             elif check_stat == 1:
                 # Found parking
                 self.state = State.parked
+                self.parked_at = GLOBAL_TIME()
             elif check_stat == 2:
                 # didn't find parking
                 self.parked_searched.append(self.going_to)
@@ -342,8 +344,10 @@ class Runner:
                     break
             GLOBAL_TIME.tick()
 
-        fitnesses = [s.fitness() for s in self.students]
-        return fitnesses
+        # fitnesses = [s.fitness() for s in self.students]
+        num_checked = [len(s.garages_tried) for s in self.students if s.state == State.parked]
+        time_parking = [s.parked_at for s in self.students if s.state == State.parked]
+        return num_checked, time_parking
 
 def diff_check(cur_time, stop_time):
     if stop_time - cur_time > 5:
