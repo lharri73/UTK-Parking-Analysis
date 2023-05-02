@@ -1,10 +1,12 @@
 import multiprocessing
-from utparking.lib.behavior_model import Runner
-import random
 import os
 import pickle
+import random
+
+from utparking.lib.behavior_model import Runner
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "..", "data")
+
 
 def run_func(seed):
     random.seed(seed)
@@ -19,10 +21,11 @@ def main():
     nums = [random.randint(0, 20480) for _ in range(10)]
     with multiprocessing.Pool(10) as p:
         ret = p.map(run_func, nums)
-        
-    with open('multirun.pkl', 'wb') as f:
+    # ret = list(map(run_func, nums))
+
+    with open("multirun.pkl", "wb") as f:
         pickle.dump(ret, f)
-        
-    
+
+
 if __name__ == "__main__":
     main()
