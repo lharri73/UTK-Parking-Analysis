@@ -18,12 +18,13 @@ def run_func(seed):
 
 
 def main():
-    nums = [random.randint(0, 20480) for _ in range(10)]
-    with multiprocessing.Pool(10) as p:
+    num_runs = 8
+    nums = [random.randint(0, 20480) for _ in range(num_runs)]
+    with multiprocessing.Pool(num_runs) as p:
         ret = p.map(run_func, nums)
     # ret = list(map(run_func, nums))
 
-    with open("multirun.pkl", "wb") as f:
+    with open("results/multirun_random.pkl", "wb") as f:
         pickle.dump(ret, f)
 
 

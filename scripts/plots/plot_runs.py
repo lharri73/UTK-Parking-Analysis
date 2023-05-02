@@ -2,7 +2,7 @@ import pickle
 import numpy as np
 
 def load_data():
-    with open('multirun.pkl', 'rb') as f:
+    with open('results/multirun_largest.pkl', 'rb') as f:
         data = pickle.load(f)
     print(len(data))
     for run in data:
@@ -17,7 +17,6 @@ def load_data():
         #     yield d[0], d[1]
 
 def main():
-
     data = np.array(list(load_data()))
     print(data.shape)
 

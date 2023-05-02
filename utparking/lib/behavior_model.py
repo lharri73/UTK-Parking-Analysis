@@ -100,7 +100,6 @@ class Student:
         self.id = cur_idx
         cur_idx += 1
         self.runner = runner
-        self.garages_tried = []
         self.dest_idx = dest_idx
         self.state = State.initial_search
         self.parked_at = None
@@ -111,6 +110,7 @@ class Student:
             ) * global_speed_adj
             self.agressive = random.randrange(128, 256 + 128) / 256.0
             self.policy = random.choice(list(Policy))
+            # self.policy = Policy.random
         else:
             genome = np.packbits(genome)[0]
             self.speed_adj = (
@@ -233,7 +233,7 @@ class Student:
             # Do nothing...for now, do we make them eventually move?
             return
         elif self.state == State.stuck:
-            print(f"stuck in {self.policy}, {self.parked_searched}")
+            # print(f"stuck in {self.policy}, {self.parked_searched}")
             return
         else:
             raise ValueError(f"Unknown state for student {self.id}")
@@ -358,7 +358,7 @@ class Runner:
 
         # fitnesses = [s.fitness() for s in self.students]
         num_checked = [
-            len(s.garages_tried) for s in self.students if s.state == State.parked
+            len(s.parked_searched) for s in self.students if s.state == State.parked
         ]
         time_parking = [s.parked_at for s in self.students if s.state == State.parked]
         return num_checked, time_parking
