@@ -2,6 +2,7 @@ from utparking.utils import unique
 
 
 class Building:
+
     def __init__(self, name, lat, lon, cat, code=None):
         self.name = name
         self.lat = lat
@@ -38,13 +39,14 @@ class Building:
     def parse_buildings(cls, data):
         # academic_buildings = []
 
-        academic_buildings_map = map(lambda f: f["children"]["locations"], data)
+        academic_buildings_map = map(lambda f: f["children"]["locations"],
+                                     data)
         academic_buildings = []
         for b in academic_buildings_map:
             academic_buildings.extend(b)
         buildings = map(
-            lambda x: cls(x["name"], x["lat"], x["lng"], x["catId"]), academic_buildings
-        )
+            lambda x: cls(x["name"], x["lat"], x["lng"], x["catId"]),
+            academic_buildings)
         building_ignores = [
             "Extension Eastern Region Office",
             "Burlington Building",
@@ -62,15 +64,18 @@ class Building:
     def parse_parking(cls, data):
         commuter_data = data[66]["children"]["locations"]
         commuter = [
-            cls(x["name"], x["lat"], x["lng"], x["catId"]) for x in commuter_data
+            cls(x["name"], x["lat"], x["lng"], x["catId"])
+            for x in commuter_data
         ]
         non_commuter_data = data[67]["children"]["locations"]
         non_commuter = [
-            cls(x["name"], x["lat"], x["lng"], x["catId"]) for x in non_commuter_data
+            cls(x["name"], x["lat"], x["lng"], x["catId"])
+            for x in non_commuter_data
         ]
         perim_commuter_data = data[73]["children"]["locations"]
         perim_commuter = [
-            cls(x["name"], x["lat"], x["lng"], x["catId"]) for x in perim_commuter_data
+            cls(x["name"], x["lat"], x["lng"], x["catId"])
+            for x in perim_commuter_data
         ]
         perim_non_commuter_data = data[74]["children"]["locations"]
         perim_non_commuter = [

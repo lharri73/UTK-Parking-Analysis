@@ -48,8 +48,7 @@ def add_stream_handler(log: logging.Logger):
 def config_logger(cfg):
     log = get_logger()
     formatter = logging.Formatter(
-        "[%(asctime)s][%(pathname)s:%(lineno)d] %(levelname)s: %(message)s"
-    )
+        "[%(asctime)s][%(pathname)s:%(lineno)d] %(levelname)s: %(message)s")
     if "log_dir" in vars(cfg):
         fh = logging.FileHandler(os.path.join(cfg.log_dir, "log.txt"))
         fh.setLevel(logging.DEBUG)

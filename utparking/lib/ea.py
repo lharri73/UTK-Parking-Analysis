@@ -4,6 +4,7 @@ import numpy as np
 
 
 class EA:
+
     def __init__(self, runner, seed=3141):
         self.exp = runner
         self.seeder = np.random.SeedSequence(seed)
@@ -17,10 +18,10 @@ class EA:
         :param p2: parent 2
         """
         if np.random.random() < p_c:
-            (ind_len,) = p1.shape
+            (ind_len, ) = p1.shape
             c1 = np.zeros_like(p1)
             c2 = np.zeros_like(p2)
-            rand = np.random.random((ind_len,))
+            rand = np.random.random((ind_len, ))
             swap_msk = rand < 0.5
 
             c1[swap_msk] = p1[swap_msk]
@@ -37,9 +38,9 @@ class EA:
         :param p_m: probability of mutation
         :param p: parent genome
         """
-        (ind_len,) = p.shape
+        (ind_len, ) = p.shape
         c = p.copy()
-        rand = np.random.random((ind_len,))
+        rand = np.random.random((ind_len, ))
         msk = rand < p_m
         c[msk] = np.logical_not(c[msk])
 
@@ -58,9 +59,9 @@ class EA:
         # self.exp.setup_run(student_genomes=children)
         ind_len = 18
 
-        population = np.random.randint(
-            0, 2, (self.num_students, ind_len), dtype=np.uint8
-        )
+        population = np.random.randint(0,
+                                       2, (self.num_students, ind_len),
+                                       dtype=np.uint8)
         mean_fits = []
         max_fits = []
         fits = []
@@ -75,10 +76,8 @@ class EA:
             mean_fits.append(np.mean(fitnesses))
             max_fits.append(np.max(fitnesses))
 
-            print(
-                "Generation: %d, Mean Fitness: %f, Max Fitness: %f"
-                % (g, mean_fits[-1], max_fits[-1])
-            )
+            print("Generation: %d, Mean Fitness: %f, Max Fitness: %f" %
+                  (g, mean_fits[-1], max_fits[-1]))
 
             print("start tourn selec")
             fs = [fitnesses] * self.num_students
@@ -90,9 +89,8 @@ class EA:
 
             print("start crossover/mutation")
             for i in range(0, (self.num_students // 2) * 2, 2):
-                c1, c2 = self.uniform_crossover(
-                    p_c, population[parents[i]], population[parents[i + 1]]
-                )
+                c1, c2 = self.uniform_crossover(p_c, population[parents[i]],
+                                                population[parents[i + 1]])
                 c1 = self.mutation(p_m, c1)
                 c2 = self.mutation(p_m, c2)
                 children[i, :] = c1[:]

@@ -39,18 +39,24 @@ GLOBAL_TIME = Ticker()
 
 
 class Parking:
+
     def __init__(self, name, capacity, searching_rate=3.3):
         self.name = name
         self.capacity = capacity
         self.searching = []
         self.parked = []
         self.search_time = self.capacity / searching_rate
+        self.last_time = 0
+        self.times = []
 
     def add_student(self, idx, agressive):
-        time_to_comp = self.search_time * (len(self.parked) / self.capacity) * agressive
+        time_to_comp = self.search_time * (len(self.parked) /
+                                           self.capacity) * agressive
         done_time = GLOBAL_TIME() + time_to_comp
         item = [idx, done_time]
         self.searching.append(item)
+        self.times.append(GLOBAL_TIME() - self.last_time)
+        self.last_time = GLOBAL_TIME()
 
     def check(self, idx):
         """
@@ -62,8 +68,8 @@ class Parking:
             2: didn't find parking
         """
         assert (
-            len(self.searching) > 0
-        ), "Trying to check status when there are no students parking"
+            len(self.searching)
+            > 0), "Trying to check status when there are no students parking"
 
         # The one checking is not the first in line
         if self.searching[0][0] != idx:
@@ -84,6 +90,14 @@ class Parking:
         else:
             return 0
 
+    def performance(self):
+        if len(self.times) == 0:
+            return 0
+        times = np.array(self.times)
+        avg = np.mean(times)
+        assert avg > 0, "unreachable. This means students were put into this parking area on the FIRST tick"
+        return 1 / avg
+
 
 class Student:
     agressive: float  # how quickly do they thrash through the parking lots (<1 is more aggressive, >1 is grandma)
@@ -92,7 +106,12 @@ class Student:
     prob_retry_lot: float  # probability that the student will retry a lot they have already looked for a spot in
     dest_idx: int  # idx of the building the student is trying to get to
 
-    def __init__(self, runner, dest_idx, global_speed_adj=1.0, genome=None):
+    def __init__(self,
+                 runner,
+                 dest_idx,
+                 global_speed_adj=1.0,
+                 genome=None,
+                 stu_policy=Policy.random):
         """
         :param runner: reference to the runner object
         """
@@ -105,17 +124,15 @@ class Student:
         self.parked_at = None
 
         if genome is None:
-            self.speed_adj = (
-                random.randrange(128 + 64, 256) / 256.0
-            ) * global_speed_adj
+            self.speed_adj = (random.randrange(128 + 64, 256) /
+                              256.0) * global_speed_adj
             self.agressive = random.randrange(128, 256 + 128) / 256.0
-            self.policy = random.choice(list(Policy))
-            # self.policy = Policy.random
+            # self.policy = random.choice(list(Policy))
+            self.policy = stu_policy
         else:
             genome = np.packbits(genome)[0]
-            self.speed_adj = (
-                ((genome & 0xFF) / 256.0) + 0.5
-            ) * global_speed_adj  # 0.5-1.5
+            self.speed_adj = ((
+                (genome & 0xFF) / 256.0) + 0.5) * global_speed_adj  # 0.5-1.5
             self.agressive = (2 * (genome >> 8)) / 256.0  # 0-2
             self.policy = Policy((genome >> 16) & 0x3)
 
@@ -125,14 +142,14 @@ class Student:
         self.parked_searched = []
 
     def find_closest_garage(self, metric=TravelMetric.time):
-        assert self.dest_idx < self.runner.to_b.shape[2], "Invalid destination idx"
+        assert self.dest_idx < self.runner.to_b.shape[
+            2], "Invalid destination idx"
         closest_garage = np.argmin(self.runner.to_b[metric, :, self.dest_idx])
         return closest_garage
 
     def __update_wait_until(self):
-        travel_time = self.runner.to_b[
-            self.runner.dist_met, self.going_to, self.dest_idx
-        ]
+        travel_time = self.runner.to_b[self.runner.dist_met, self.going_to,
+                                       self.dest_idx]
         travel_time *= self.speed_adj
         self.wait_until = GLOBAL_TIME() + travel_time
 
@@ -143,14 +160,15 @@ class Student:
             # Find where we need to go and how long it will take to get there
             if self.policy == Policy.closest:
                 self.going_to = np.argmin(
-                    self.runner.to_b[self.runner.dist_met, :, self.dest_idx]
-                )
+                    self.runner.to_b[self.runner.dist_met, :, self.dest_idx])
             elif self.policy == Policy.random:
                 self.going_to = random.randrange(self.runner.to_b.shape[1])
             elif self.policy == Policy.largest:
-                self.going_to = np.argmax(list(self.runner.sizes["parking"].values()))
+                self.going_to = np.argmax(
+                    list(self.runner.sizes["parking"].values()))
             elif self.policy == Policy.smallest:
-                self.going_to = np.argmin(list(self.runner.sizes["parking"].values()))
+                self.going_to = np.argmin(
+                    list(self.runner.sizes["parking"].values()))
             else:
                 raise ValueError(f"Unknown policy {self.policy}")
 
@@ -165,7 +183,8 @@ class Student:
                 diff_check(GLOBAL_TIME(), self.wait_until)
                 self.state = State.parking
                 self.wait_until = None
-                self.runner.parking[self.going_to].add_student(self.id, self.agressive)
+                self.runner.parking[self.going_to].add_student(
+                    self.id, self.agressive)
         elif self.state == State.parking:
             check_stat = self.runner.parking[self.going_to].check(self.id)
             if check_stat == 0:
@@ -181,9 +200,8 @@ class Student:
                 self.state = State.searching
         elif self.state == State.searching:
             if self.policy == Policy.closest:
-                closest = np.argsort(
-                    self.runner.btwn_g[self.runner.dist_met, self.going_to, :]
-                )
+                closest = np.argsort(self.runner.btwn_g[self.runner.dist_met,
+                                                        self.going_to, :])
                 for idx in closest:
                     if idx in self.parked_searched:
                         continue
@@ -193,7 +211,8 @@ class Student:
                     self.state = State.stuck
                     return
             elif self.policy == Policy.largest:
-                largest = np.argsort(list(self.runner.sizes["parking"].values()))[::-1]
+                largest = np.argsort(
+                    list(self.runner.sizes["parking"].values()))[::-1]
                 for idx in largest:
                     if idx in self.parked_searched:
                         continue
@@ -203,7 +222,8 @@ class Student:
                     self.state = State.stuck
                     return
             elif self.policy == Policy.smallest:
-                smallest = np.argsort(list(self.runner.sizes["parking"].values()))
+                smallest = np.argsort(
+                    list(self.runner.sizes["parking"].values()))
                 for idx in smallest:
                     if idx in self.parked_searched:
                         continue
@@ -214,7 +234,8 @@ class Student:
                     self.state = State.stuck
                     return
             elif self.policy == Policy.random:
-                possible = np.array(list(range(len(self.runner.sizes["parking"]))))
+                possible = np.array(
+                    list(range(len(self.runner.sizes["parking"]))))
                 np.random.shuffle(possible)
                 for idx in possible:
                     if idx in self.parked_searched:
@@ -246,10 +267,10 @@ class Student:
 
     def fitness(self):
         if self.state == State.parked:
-            travel_time = self.runner.to_b[
-                self.runner.dist_met, self.going_to, self.dest_idx
-            ]
-            max_time = np.max(self.runner.to_b[self.runner.dist_met, :, self.dest_idx])
+            travel_time = self.runner.to_b[self.runner.dist_met, self.going_to,
+                                           self.dest_idx]
+            max_time = np.max(self.runner.to_b[self.runner.dist_met, :,
+                                               self.dest_idx])
             f = travel_time / max_time
             return f
         else:
@@ -257,6 +278,7 @@ class Student:
 
 
 class Runner:
+
     def __init__(self, data_dir, vehicle_occupancy=1.5, time_scale=1.0):
         """
         :param data_dir(str): directory containing processed matrices and
@@ -281,9 +303,8 @@ class Runner:
         with open(sizes_path) as f:
             self.sizes = json.load(f)
         self.max_occ = reduce(add, self.sizes["buildings"].values(), 0)
-        parking_limit = (
-            reduce(add, self.sizes["parking"].values(), 0) * vehicle_occupancy
-        )
+        parking_limit = (reduce(add, self.sizes["parking"].values(), 0) *
+                         vehicle_occupancy)
         self.parser = Parser(os.path.join(data_dir, "parsed.json"))
         self.log.debug(
             f"Found {len(self.parser.buildings)} buildings with {self.max_occ} occuancy limit"
@@ -295,7 +316,7 @@ class Runner:
 
         self.log.info("Runner initialization complete")
 
-    def setup_run(self, student_genomes=None):
+    def setup_run(self, student_genomes=None, stu_policy=Policy.random):
         self.log.debug("Creating students")
         self.students = []
         i = 0
@@ -303,15 +324,12 @@ class Runner:
             for _ in range(b_cap):
                 d_idx = self.parser.buildings.index(b_name)
                 self.students.append(
-                    Student(
-                        self,
-                        d_idx,
-                        global_speed_adj=1 / self.time_scale,
-                        genome=(
-                            student_genomes[i] if student_genomes is not None else None
-                        ),
-                    )
-                )
+                    Student(self,
+                            d_idx,
+                            global_speed_adj=1 / self.time_scale,
+                            genome=(student_genomes[i]
+                                    if student_genomes is not None else None),
+                            stu_policy=stu_policy))
                 i += 1
         self.log.info(f"Created {len(self.students)} student objects")
         self.log.debug(f"Creaint Parking Areas")
@@ -358,10 +376,14 @@ class Runner:
 
         # fitnesses = [s.fitness() for s in self.students]
         num_checked = [
-            len(s.parked_searched) for s in self.students if s.state == State.parked
+            len(s.parked_searched) for s in self.students
+            if s.state == State.parked
         ]
-        time_parking = [s.parked_at for s in self.students if s.state == State.parked]
-        return num_checked, time_parking
+        time_parking = [
+            s.parked_at for s in self.students if s.state == State.parked
+        ]
+        garage_perf = [p.performance() for p in self.parking]
+        return num_checked, time_parking, garage_perf
 
 
 def diff_check(cur_time, stop_time):

@@ -1,5 +1,4 @@
 import json
-
 # import googlemaps
 import os
 
