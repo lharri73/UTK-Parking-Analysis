@@ -348,10 +348,14 @@ class Runner:
         self.students = []
         self.parking = []
 
-    def print_stats(self):
+    def get_stats(self):
         stats = {data: 0 for data in State}
         for student in self.students:
             stats[student.state] += 1
+        return stats
+
+    def print_stats(self):
+        stats = self.get_stats()
         print(stats)
         return stats
 
@@ -359,7 +363,9 @@ class Runner:
         print("start")
         i = -1
         tim = 0
+        all_stats = []
         while True:
+            all_stats.append(self.get_stats())
             i += 1
             tic = pytime.time()
             for student in self.students:
@@ -375,15 +381,15 @@ class Runner:
             GLOBAL_TIME.tick()
 
         # fitnesses = [s.fitness() for s in self.students]
-        num_checked = [
-            len(s.parked_searched) for s in self.students
-            if s.state == State.parked
-        ]
-        time_parking = [
-            s.parked_at for s in self.students if s.state == State.parked
-        ]
-        garage_perf = [p.performance() for p in self.parking]
-        return num_checked, time_parking, garage_perf
+        # num_checked = [
+        #     len(s.parked_searched) for s in self.students
+        #     if s.state == State.parked
+        # ]
+        # time_parking = [
+        #     s.parked_at for s in self.students if s.state == State.parked
+        # ]
+        # garage_perf = [p.performance() for p in self.parking]
+        return all_stats
 
 
 def diff_check(cur_time, stop_time):

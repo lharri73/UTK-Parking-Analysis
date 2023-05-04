@@ -34,7 +34,7 @@ def run_exp(policy):
         ret = p.map(run_func, zip(nums, p_vec))
     # ret = list(map(run_func, nums))
 
-    with open(f"results/multirun_{policy}.pkl", "wb") as f:
+    with open(f"results/multirun_times_{policy}.pkl", "wb") as f:
         pickle.dump(ret, f)
 
 

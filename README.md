@@ -29,6 +29,8 @@ and is included in its raw form just for transparency.
  ┃ ┗ 📜to_garages.npy           # distance matrix from interstate to garages (driving)
  ┣ 📂scripts
  ┃ ┗ 📂data_gen                 # folder of scripts used to parse raw map and building size data
+ ┃ ┗ 📂maps                     # folder of scripts used to create maps
+ ┃ ┗ 📂plots                    # folder of scripts used to create matplotlib plots
  ┣ 📂utparking                  # algo. code
  ┣ 📜.gitignore
  ┣ 📜README.md              # this file
